@@ -1,55 +1,109 @@
 <?php
 
-/*
-* On utilise une fonction pour créer notre custom post type 'Séries TV'
-*/
+    function wp_custom_post_instruments() {
 
-function wpm_custom_post_type() {
+        $labels = array(
+            'name'                => _x('Instruments', 'Post Type General Name'),
+            'singular_name'       => _x('Instrument', 'Post Type Singular Name'),
+            'menu_name'           => __('Instruments'),
+            'all_items'           => __('Tous les instruments'),
+            'view_item'           => __('Voir les catégories d\'instrument'),
+            'add_new_item'        => __('Ajouter une nouvelle catégorie d\'instrument'),
+            'add_new'             => __('Ajouter'),
+            'edit_item'           => __('Editer la catégorie d\'instrument'),
+            'update_item'         => __('Modifier la catégorie d\'instrument'),
+            'search_items'        => __('Rechercher une catégorie d\'instrument'),
+            'not_found'           => __('Non trouvée'),
+            'not_found_in_trash'  => __('Non trouvée dans la corbeille'),
+        );
+        
+        $args = array(
+            'label'               => __('Catégorie d\'instrument'),
+            'description'         => __('Toutes les catégories d\'instrument'),
+            'labels'              => $labels,
+            'menu_icon'           => 'dashicons-format-audio',
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'show_in_rest'        => true,
+            'hierarchical'        => false,
+            'public'              => true,
+            'has_archive'         => true,
+            'rewrite'			  => array( 'slug' => 'les-instruments'),
+        );
+        
+        register_post_type( 'instruments', $args );
 
-	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
-	$labels = array(
-		// Le nom au pluriel
-		'name'                => _x( 'Nom', 'Post Type General Name'),
-		// Le nom au singulier
-		'singular_name'       => _x( 'Nom_singulier', 'Post Type Singular Name'),
-		// Le libellé affiché dans le menu
-		'menu_name'           => __( 'Nom'),
-		// Les différents libellés de l'administration
-		'all_items'           => __( 'Toutes les séries TV'),
-		'view_item'           => __( 'Voir les séries TV'),
-		'add_new_item'        => __( 'Ajouter une nouvelle série TV'),
-		'add_new'             => __( 'Ajouter'),
-		'edit_item'           => __( 'Editer la séries TV'),
-		'update_item'         => __( 'Modifier la séries TV'),
-		'search_items'        => __( 'Rechercher une série TV'),
-		'not_found'           => __( 'Non trouvée'),
-		'not_found_in_trash'  => __( 'Non trouvée dans la corbeille'),
-	);
-	
-	// On peut définir ici d'autres options pour notre custom post type
-	
-	$args = array(
-		'label'               => __( 'Séries TV'),
-		'description'         => __( 'Tous sur séries TV'),
-		'labels'              => $labels,
-		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		/* 
-		* Différentes options supplémentaires
-		*/
-		'show_in_rest' => true,
-		'hierarchical'        => false,
-		'public'              => true,
-		'has_archive'         => true,
-		'rewrite'			  => array( 'slug' => 'series-tv'),
+    }
 
-	);
-	
-	// On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
-	register_post_type( 'seriestv', $args );
+    function wp_custom_post_ateliers() {
 
-}
+        $labels = array(
+            'name'                => _x('Ateliers', 'Post Type General Name'),
+            'singular_name'       => _x('Atelier', 'Post Type Singular Name'),
+            'menu_name'           => __('Ateliers'),
+            'all_items'           => __('Tous les ateliers'),
+            'view_item'           => __('Voir les ateliers'),
+            'add_new_item'        => __('Ajouter un nouvel atelier'),
+            'add_new'             => __('Ajouter'),
+            'edit_item'           => __('Editer la catégorie d\'instrument'),
+            'update_item'         => __('Modifier la catégorie d\'instrument'),
+            'search_items'        => __('Rechercher une catégorie d\'instrument'),
+            'not_found'           => __('Non trouvée'),
+            'not_found_in_trash'  => __('Non trouvée dans la corbeille'),
+        );
+        
+        $args = array(
+            'label'               => __('Les ateliers'),
+            'description'         => __('Toutes les ateliers'),
+            'labels'              => $labels,
+            'menu_icon'           => 'dashicons-admin-generic',
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'show_in_rest'        => true,
+            'hierarchical'        => false,
+            'public'              => true,
+            'has_archive'         => true,
+            'rewrite'			  => array( 'slug' => 'les-ateliers'),
+        );
+        
+        register_post_type('ateliers', $args );
+    
+    }
 
-add_action( 'init', 'wpm_custom_post_type', 0 );
+    function wp_custom_post_professeurs() {
+
+        $labels = array(
+            'name'                => _x('Professeurs', 'Post Type General Name'),
+            'singular_name'       => _x('Professeur', 'Post Type Singular Name'),
+            'menu_name'           => __('Professeurs'),
+            'all_items'           => __('Tous les professeurs'),
+            'view_item'           => __('Voir les professeurs'),
+            'add_new_item'        => __('Ajouter un nouveau professeur'),
+            'add_new'             => __('Ajouter'),
+            'edit_item'           => __('Editer un professeur'),
+            'update_item'         => __('Modifier un professeur'),
+            'search_items'        => __('Rechercher un professeur'),
+            'not_found'           => __('Non trouvée'),
+            'not_found_in_trash'  => __('Non trouvée dans la corbeille'),
+        );
+        
+        $args = array(
+            'label'               => __('Professeurs'),
+            'description'         => __('Toutes les professeurs'),
+            'labels'              => $labels,
+            'menu_icon'           => 'dashicons-welcome-learn-more',
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'show_in_rest'        => true,
+            'hierarchical'        => false,
+            'public'              => true,
+            'has_archive'         => true,
+            'rewrite'			  => array( 'slug' => 'les-instruments'),
+        );
+        
+        register_post_type( 'professeurs', $args );
+
+    }
+
+add_action( 'init', 'wp_custom_post_instruments', 0 );
+add_action( 'init', 'wp_custom_post_ateliers', 0 );
+add_action( 'init', 'wp_custom_post_professeurs', 0 );
 
 ?>
