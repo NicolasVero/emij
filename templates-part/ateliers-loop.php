@@ -2,7 +2,7 @@
 
     <?php
     
-        $loop = new WP_Query( array( 'post_type' => 'instruments', 'posts_per_page' => '10' ) ); 
+        $loop = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => '10' ) ); 
         
         while ($loop->have_posts()) :
             echo '<div class="post">';
