@@ -30,7 +30,7 @@
             'rewrite'			  => array( 'slug' => 'les-instruments'),
         );
         
-        register_post_type( 'instruments', $args );
+        register_post_type('instruments', $args);
 
     }
 
@@ -102,8 +102,43 @@
 
     }
 
-add_action( 'init', 'wp_custom_post_instruments', 0 );
-add_action( 'init', 'wp_custom_post_ateliers', 0 );
-add_action( 'init', 'wp_custom_post_professeurs', 0 );
+    function wp_custom_post_dates() {
+
+        $labels = array(
+            'name'                => _x('Dates', 'Post Type General Name'),
+            'singular_name'       => _x('Date', 'Post Type Singular Name'),
+            'menu_name'           => __('Dates'),
+            'all_items'           => __('Toutes les dates'),
+            'view_item'           => __('Voir les dates'),
+            'add_new_item'        => __('Ajouter une nouvelle date'),
+            'add_new'             => __('Ajouter'),
+            'edit_item'           => __('Editer une date'),
+            'update_item'         => __('Modifier une date'),
+            'search_items'        => __('Rechercher une date'),
+            'not_found'           => __('Non trouvée'),
+            'not_found_in_trash'  => __('Non trouvée dans la corbeille'),
+        );
+        
+        $args = array(
+            'label'               => __('Dates'),
+            'description'         => __('Toutes les dates'),
+            'labels'              => $labels,
+            'menu_icon'           => 'dashicons-calendar-alt',
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'show_in_rest'        => true,
+            'hierarchical'        => false,
+            'public'              => true,
+            'has_archive'         => true,
+            'rewrite'			  => array( 'slug' => 'les-dates'),
+        );
+        
+        register_post_type( 'dates', $args );
+
+    }
+
+    add_action( 'init', 'wp_custom_post_instruments', 0);
+    add_action( 'init', 'wp_custom_post_ateliers'   , 0);
+    add_action( 'init', 'wp_custom_post_professeurs', 0);
+    add_action( 'init', 'wp_custom_post_dates'      , 0);
 
 ?>
