@@ -12,8 +12,7 @@
 
 
     add_action('init', 'add_menu');
-    function add_menu()
-    {
+    function add_menu() {
         register_nav_menu('menu', 'Zone de création d\'un menu');
     }
 
