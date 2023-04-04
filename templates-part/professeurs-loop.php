@@ -10,9 +10,13 @@
     ?>   
                                     
         <h2><?php the_title(); ?></h2>			
-        <?php the_excerpt(); ?>
-        <a href=<?php the_permalink(); ?>>En savoir plus</a>
+        <?php
+            the_field('instruments');
+            the_field('presence');
         
+        ?>
+        
+
         </div>
         <?php endwhile; ?>
 </div>
