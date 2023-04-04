@@ -11,6 +11,7 @@
                                     
         <h2><?php the_title(); ?></h2>			
         <?php the_excerpt(); ?>
+        <?php the_post_thumbnail(); ?>
         <a href=<?php the_permalink(); ?>>En savoir plus</a>
         
         </div>

@@ -10,25 +10,15 @@
     require_once 'inc/custompost.php';
     require_once 'inc/metaboxes.php';
 
-    add_action('contact_widget', 'contact_form');
-    
-    function contact_fom() {
 
-        // if ( function_exists('register_sidebar') )
-        register_sidebar( array(
-            'name'       => __( 'Footer Top', 'virtue' ),
-            'id'     => 'footer_top',
-            'description'    => __( 'Add widgets here to appear above your footer.', 'virtue' ),
-            'before_widget' => '<aside id="%1$s" class="newsL %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h3>',
-            'after_title'   => '</h3>',
-            )
-        );
+    add_action('init', 'add_menu');
+    function add_menu()
+    {
+        register_nav_menu('menu', 'Zone de création d\'un menu');
     }
-    
 
-
-
-
+    function mytheme_post_thumbnails() {
+        add_theme_support( 'post-thumbnails' );
+    }
+    add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );   
 ?>
