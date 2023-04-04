@@ -14,22 +14,44 @@
         the_field('instruments');
         
         if( have_rows('choix-horaire') ) {
+            $donnees = [];
             while( have_rows('choix-horaire') ) { 
                 
                 the_row();
 
-                $presence_jour    = get_sub_field('presence-jours');
-                $presence_heure_d = get_sub_field('presence-heures-debut');
-                $presence_heure_f = get_sub_field('presence-heures-fin'); ?>
-
-            <p>Présent le <?= $presence_jour ?> de <?= $presence_heure_d ?>h à <?= $presence_heure_f ?>h</p>
-
-
-            <?php
+                $donnees[] = [
+                    'presence_jours'   => get_sub_field('presence-jours'),
+                    'presence_heure_d' => get_sub_field('presence-heures-debut'),
+                    'presence_heure_f' => get_sub_field('presence-heures-fin')
+                ];
             }
         }
+
+        print_r($donnees);
+
+        $semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+        $cpt = 0;
+
+        echo "taille : " . count($donnees);
+
+        for($i = 0; $i < count($donnees); $i++) {
+            for($j = 0; $j < count($semaine); $j++) {
+                if(in_array($semaine[$j], $donnees[$i])) { ?>
+                    <div class='present'>
+                        <?= $semaine[$j]; ?>
+                        <?= $donnees[$i]['presence_heure_d'][$cpt]; ?>
+                        <?= $donnees[$i]['presence_heure_f'][$cpt]; $cpt++;?>
+                    </div>
+                    <?php } else { ?>
+                        <div><?= $semaine[$j]; ?></div>
+                    <?php }
+            }
+        }
+
         echo "</div>";
     }
 
     wp_reset_query(); ?>
 </div>
+
+
