@@ -1,18 +1,18 @@
 <div class="post-container">
-
     <?php
     
-        $loop = new WP_Query( array( 'post_type' => 'instruments', 'posts_per_page' => '10' ) ); 
-        
-        while ($loop->have_posts()) :
-            echo '<div class="post">';
-            $loop->the_post();
-    ?>   
-                                    
-        <h2><?php the_title(); ?></h2>			
-        <?php the_excerpt(); ?>
-        <a href=<?php the_permalink(); ?>>En savoir plus</a>
-        
+        $query = new WP_Query( array( 'post_type' => 'instruments') ); 
+
+
+        while ($query->have_posts()) :
+            $query->the_post();
+        ?>   
+           
+        <div> 
+            <h2><?php the_title(); ?></h2>			
+            <?php the_excerpt(); the_post_thumbnail(); ?>
+            <a href=<?php the_permalink(); ?>>En savoir plus</a>
         </div>
-        <?php endwhile; ?>
+
+        <?php endwhile; wp_reset_query(); ?>
 </div>

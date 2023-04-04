@@ -1,22 +1,19 @@
 <div class="post-container">
-
     <?php
     
-        $loop = new WP_Query( array( 'post_type' => 'professeurs', 'posts_per_page' => '10' ) ); 
-        
-        while ($loop->have_posts()) :
-            echo '<div class="post">';
-            $loop->the_post();
-    ?>   
-                                    
-        <h2><?php the_title(); ?></h2>			
-        <?php
-            the_field('instruments');
-            the_field('presence');
-        
-        ?>
-        
+        $query = new WP_Query( array( 'post_type' => 'professeurs') ); 
 
+
+        while ($query->have_posts()) :
+            $query->the_post();
+        ?>   
+           
+        <div> 
+            <h2><?php the_title(); ?></h2>			
+            <?php the_excerpt(); the_post_thumbnail(); 
+            the_field('instruments');
+            the_field('presence'); ?>
         </div>
-        <?php endwhile; ?>
+
+        <?php endwhile; wp_reset_query(); ?>
 </div>
