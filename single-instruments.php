@@ -10,8 +10,8 @@ while (have_posts()) :
 	
 
     include 'templates-part/professeurs-loop.php';
-
-    echo do_shortcode('[contact-form-7 id="48" title="Formulaire de contact"]');
+    include 'templates-part/contact-form.php';
+    
 
     ?>
 
