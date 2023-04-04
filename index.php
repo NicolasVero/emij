@@ -8,8 +8,11 @@
     echo "<hr>";
     include 'templates-part/dates-loop.php';
     echo "<hr>";
-    include 'templates-part/professeurs-loop.php';
-    
+    include 'templates-part/contact-form.php';
+    include 'templates-part/a-propos-page-loop.php';
+
+
+
     get_footer();
 
 ?>
