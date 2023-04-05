@@ -54,14 +54,37 @@ body {
 .secondary-button:hover {
   color: green;
 }
-input:not([type=submit]) {
+input[type=text],
+input[type="email"] {
   border: 3px solid #FFFFFF;
   background-color: transparent;
   height: 50px;
   padding: 15px;
 }
-input:not([type=submit])::placeholder {
+input[type=text]::placeholder,
+input[type="email"]::placeholder {
   color: #FFFFFF;
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  padding: 5px;
+  height: 5px;
+  border: 3px solid #FFFFFF;
+}
+.checkbox:not(:checked) + label::after,
+[type="checkbox"]:checked + label::after {
+  content: '✕';
+  position: absolute;
+  top: 0.38em;
+  left: 0.18em;
+  font-size: 1.6em;
+  color: #CB22ED;
+  line-height: 0;
+  transition: all 0.2s;
 }
 .atelier-container {
   background-color: yellow;
@@ -104,16 +127,17 @@ input:not([type=submit])::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 390px;
-  z-index: 5;
   position: relative;
+  height: 430px;
+  z-index: 5;
+  padding: 0;
 }
 .contact-form::before {
   content: '';
   background-color: #FF6971;
   transform: skewY(356deg);
   width: 100%;
-  height: 390px;
+  height: inherit;
   position: absolute;
   top: 0;
   z-index: -1;
@@ -132,16 +156,6 @@ input:not([type=submit])::placeholder {
   display: flex;
   align-items: center;
   gap: 15px;
-}
-.contact-form form label input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  padding: 5px;
-  height: 5px;
-  border: 3px solid white;
 }
 .contact-form form label span {
   color: #FFFFFF;

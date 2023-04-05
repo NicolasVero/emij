@@ -27,7 +27,7 @@
 }
 
 
-input:not([type=submit]) {
+input[type=text], input[type="email"] {
     border: 3px solid @white;
     background-color: transparent;
     height: @components-height;
@@ -36,4 +36,59 @@ input:not([type=submit]) {
     &::placeholder {
         color: @white;
     }
+}
+
+
+// input:not([type=submit]) {
+//     border: 3px solid @white;
+//     background-color: transparent;
+//     height: @components-height;
+//     padding: 15px;
+
+//     &::placeholder {
+//         color: @white;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance : none;
+
+    background-color: transparent;
+    padding: 5px;
+    height: 5px;
+    border: 3px solid @white;
+}
+
+.checkbox:not(:checked) + label::after,[type="checkbox"]:checked + label::after {	
+    content: '✕';	
+    position: absolute;	
+    top: .38em;	
+    left: .18em;	
+    font-size: 1.6em;	
+    color: #CB22ED;	
+    line-height: 0;	
+    transition: all .2s;
 }
