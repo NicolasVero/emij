@@ -1,0 +1,39 @@
+// out: false
+
+.primary-button, .secondary-button {
+    padding: 15px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    max-width: fit-content;
+}
+
+.primary-button {
+    background-color: @purple;
+    color: @white;
+
+    &:hover {
+        color: blue;
+    }
+}
+
+.secondary-button {
+    background-color: @white;
+    color: @dark_yellow;
+
+    &:hover {
+        color: green;
+    }
+}
+
+
+input:not([type=submit]) {
+    border: 3px solid @white;
+    background-color: transparent;
+    height: 50px;
+    padding: 15px;
+
+    &::placeholder {
+        color: @white;
+    }
+}

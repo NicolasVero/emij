@@ -8,10 +8,10 @@
             $query->the_post();
         ?>   
            
-        <div class="col-md-3"> 
+        <div class="col-md-4 instrument-container"> 
             <h2><?php the_title(); ?></h2>			
             <?php the_excerpt(); the_post_thumbnail(); ?>
-            <a href=<?php the_permalink(); ?>>En savoir plus</a>
+            <a class="primary-button" href=<?php the_permalink(); ?>>En savoir plus</a>
         </div>
 
         <?php endwhile; wp_reset_query(); ?>

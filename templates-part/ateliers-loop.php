@@ -7,11 +7,11 @@
             $query->the_post();
         ?>   
            
-        <div class="col-md-3"> 
+        <div class="col-md-3 atelier-container"> 
             <div class="row">
                 <h2><?php the_title(); ?></h2>			
                 <?php the_excerpt(); ?>
-                <a href=<?php the_permalink(); ?>>En savoir plus</a>
+                <a class="primary-button" href=<?php the_permalink(); ?>>En savoir plus</a>
                 <?php the_post_thumbnail(); ?>
         </div>
         </div>
