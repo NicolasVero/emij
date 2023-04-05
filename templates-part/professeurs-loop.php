@@ -24,8 +24,6 @@
             }
         }
 
-        print_r($presence_jours);
-
         $semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
         $cpt = 0;
 
@@ -41,7 +39,7 @@
                 <div><?= $semaine[$i]; ?></div>
             <?php }
         }
-        $presence_jours = array();
+        $presence_jours   = array();
         $presence_heure_d = array();
         $presence_heure_f = array();
         echo "</div>";

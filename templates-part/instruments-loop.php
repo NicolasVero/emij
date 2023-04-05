@@ -1,4 +1,4 @@
-<div class="post-container">
+<div class="row">
     <?php
     
         $query = new WP_Query( array( 'post_type' => 'instruments') ); 
@@ -8,7 +8,7 @@
             $query->the_post();
         ?>   
            
-        <div> 
+        <div class="col-md-3"> 
             <h2><?php the_title(); ?></h2>			
             <?php the_excerpt(); the_post_thumbnail(); ?>
             <a href=<?php the_permalink(); ?>>En savoir plus</a>
