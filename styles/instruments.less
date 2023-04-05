@@ -1,11 +1,26 @@
 // out: false
 
-.instrument-container {
-    background-color: aqua  ;
+.instruments-container {
 
-    img {
-        width: 10vw;
-        height: auto;
+    & .instrument-container:nth-child(1) { background-color: @bois;        }  
+    & .instrument-container:nth-child(2) { background-color: @cuivres;     }  
+    & .instrument-container:nth-child(3) { background-color: @chant;       }  
+    & .instrument-container:nth-child(4) { background-color: @claviers;    }  
+    & .instrument-container:nth-child(5) { background-color: @cordes;      }  
+    & .instrument-container:nth-child(6) { background-color: @percussions; }  
+
+    .instrument-container {
+        background-color: aqua;
+        text-align: center;
+        
+        h2 {
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 10vw;
+            height: auto;
+        }
+        
     }
-
 }

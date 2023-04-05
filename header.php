@@ -14,4 +14,4 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container-fluid">

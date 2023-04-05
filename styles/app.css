@@ -1,1 +1,78 @@
-*{box-sizing:border-box;list-style-type:none;text-decoration:none;box-shadow:none}img{display:none}html,body{background-color:green}.atelier-container{background-color:yellow}.instrument-container{background-color:aqua  }.instrument-container img{width:10vw;height:auto}.primary-button,.secondary-button{padding:15px 30px;text-transform:uppercase;text-decoration:none;font-weight:500;max-width:fit-content}.primary-button{background-color:#651F59;color:#FFFFFF}.primary-button:hover{color:blue}.secondary-button{background-color:#FFFFFF;color:#FCBC44}.secondary-button:hover{color:green}input:not([type=submit]){border:3px solid #FFFFFF;background-color:transparent;height:50px;padding:15px}input:not([type=submit])::placeholder{color:#FFFFFF}
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  box-shadow: none;
+  color: #651F59;
+}
+html,
+body {
+  background-color: green;
+}
+.atelier-container {
+  background-color: yellow;
+  text-align: center;
+}
+.atelier-container .primary-button {
+  margin: 0 auto;
+}
+.instruments-container .instrument-container:nth-child(1) {
+  background-color: #FF9E6E;
+}
+.instruments-container .instrument-container:nth-child(2) {
+  background-color: #E2B4FF;
+}
+.instruments-container .instrument-container:nth-child(3) {
+  background-color: #FFA800;
+}
+.instruments-container .instrument-container:nth-child(4) {
+  background-color: #F696BC;
+}
+.instruments-container .instrument-container:nth-child(5) {
+  background-color: #89E8FF;
+}
+.instruments-container .instrument-container:nth-child(6) {
+  background-color: #96FDEF;
+}
+.instruments-container .instrument-container {
+  background-color: aqua;
+  text-align: center;
+}
+.instruments-container .instrument-container h2 {
+  text-transform: uppercase;
+}
+.instruments-container .instrument-container img {
+  width: 10vw;
+  height: auto;
+}
+.primary-button,
+.secondary-button {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  max-width: fit-content;
+}
+.primary-button {
+  background-color: #651F59;
+  color: #FFFFFF;
+}
+.primary-button:hover {
+  color: blue;
+}
+.secondary-button {
+  background-color: #FFFFFF;
+  color: #FCBC44;
+}
+.secondary-button:hover {
+  color: green;
+}
+input:not([type=submit]) {
+  border: 3px solid #FFFFFF;
+  background-color: transparent;
+  height: 50px;
+  padding: 15px;
+}
+input:not([type=submit])::placeholder {
+  color: #FFFFFF;
+}

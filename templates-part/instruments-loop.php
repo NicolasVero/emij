@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row instruments-container">
     <?php
     
         $query = new WP_Query( array( 'post_type' => 'instruments') ); 
