@@ -1,13 +1,67 @@
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs169vgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
+}
 * {
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
   box-shadow: none;
   color: #651F59;
+  border: none;
+  font-family: 'Oswald', 'Sans-serif';
 }
 html,
 body {
-  background-color: green;
+  background-color: #FFFFFF;
+}
+.primary-button,
+.secondary-button {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  max-width: fit-content;
+}
+.primary-button {
+  background-color: #651F59;
+  color: #FFFFFF;
+}
+.primary-button:hover {
+  color: blue;
+}
+.secondary-button {
+  background-color: #FFFFFF;
+  color: #FCBC44;
+}
+.secondary-button:hover {
+  color: green;
+}
+input:not([type=submit]) {
+  border: 3px solid #FFFFFF;
+  background-color: transparent;
+  height: 50px;
+  padding: 15px;
+}
+input:not([type=submit])::placeholder {
+  color: #FFFFFF;
 }
 .atelier-container {
   background-color: yellow;
@@ -42,37 +96,41 @@ body {
   text-transform: uppercase;
 }
 .instruments-container .instrument-container img {
-  width: 10vw;
+  width: 14vw;
   height: auto;
 }
-.primary-button,
-.secondary-button {
-  padding: 15px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  max-width: fit-content;
+.contact-form {
+  background-color: #FF6971;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.primary-button {
-  background-color: #651F59;
+.contact-form h2 {
   color: #FFFFFF;
 }
-.primary-button:hover {
-  color: blue;
+.contact-form form p {
+  display: flex;
+  gap: 8px;
 }
-.secondary-button {
-  background-color: #FFFFFF;
-  color: #FCBC44;
-}
-.secondary-button:hover {
-  color: green;
-}
-input:not([type=submit]) {
-  border: 3px solid #FFFFFF;
-  background-color: transparent;
+.contact-form form p input[type="submit"] {
   height: 50px;
-  padding: 15px;
 }
-input:not([type=submit])::placeholder {
+.contact-form form label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contact-form form label input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  padding: 5px;
+  height: 5px;
+  border: 3px solid white;
+}
+.contact-form form label span {
   color: #FFFFFF;
+  max-width: 600px;
 }
