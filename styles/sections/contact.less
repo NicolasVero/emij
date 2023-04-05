@@ -1,10 +1,28 @@
 // out: false
 
 .contact-form {
-    background-color: @pink;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    // transform: skewY(0.98turn);
+    // background-color: @pink;
+    height: 390px;
+    z-index: 5;
+    
+    
+    position: relative;
+
+    &::before {
+        content: '';
+        background-color: @pink;
+        transform: skewY(356deg);
+        width: 100%;
+        height: 390px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
 
     h2 {
         color: @white;

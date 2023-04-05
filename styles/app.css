@@ -100,10 +100,23 @@ input:not([type=submit])::placeholder {
   height: auto;
 }
 .contact-form {
-  background-color: #FF6971;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 390px;
+  z-index: 5;
+  position: relative;
+}
+.contact-form::before {
+  content: '';
+  background-color: #FF6971;
+  transform: skewY(356deg);
+  width: 100%;
+  height: 390px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 .contact-form h2 {
   color: #FFFFFF;
