@@ -151,6 +151,100 @@ input[type="email"]::placeholder {
   width: 14vw;
   height: auto;
 }
+.dates-container {
+  background-color: #651F59;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  height: 675px;
+  position: relative;
+  z-index: 5;
+  padding: 0 250px;
+}
+.dates-container::before {
+  content: '';
+  background-color: inherit;
+  transform: skewY(356deg);
+  width: 100%;
+  height: 125%;
+  position: absolute;
+  top: -66px;
+  z-index: -1;
+}
+.dates-container div {
+  display: flex;
+}
+.dates-container div div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.dates-container div div:first-of-type p:not(:first-of-type) {
+  overflow: hidden;
+}
+.dates-container div div:nth-child(2) {
+  overflow: hidden;
+}
+.dates-container div div:nth-child(2) img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.dates-container div:nth-child(1) {
+  flex-direction: row-reverse;
+  border: 3px solid #FFFFFF;
+  grid-area: 1 / 1 / 2 / 3;
+}
+.dates-container div:nth-child(1) div:first-of-type {
+  max-width: 60%;
+}
+.dates-container div:nth-child(1) div:first-of-type p,
+.dates-container div:nth-child(1) div:first-of-type h2 {
+  color: #FFFFFF;
+}
+.dates-container div:nth-child(1) div:nth-child(2) {
+  min-width: 40%;
+}
+.dates-container div:nth-child(2) {
+  flex-direction: column-reverse;
+  grid-area: 2 / 1 / 4 / 2;
+  background-color: #FFFFFF;
+}
+.dates-container div:nth-child(2) div:first-of-type {
+  max-height: 60%;
+}
+.dates-container div:nth-child(3) {
+  flex-direction: column;
+  background-color: #D9BFFF;
+  grid-area: 2 / 2 / 4 / 3;
+}
+.dates-container div:nth-child(3) div:first-of-type {
+  max-height: 60%;
+}
+.dates-container div:nth-child(4) {
+  min-height: 100%;
+  flex-direction: column-reverse;
+  grid-area: 1 / 3 / 3 / 5;
+}
+.dates-container div:nth-child(4) div:first-of-type {
+  min-height: 60%;
+}
+.dates-container div:nth-child(4) div:first-of-type p,
+.dates-container div:nth-child(4) div:first-of-type h2 {
+  color: #FCBC44;
+}
+.dates-container div:nth-child(5) {
+  grid-area: 3 / 3 / 4 / 5;
+}
+.dates-container div:nth-child(5) h2 {
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.dates-container div:nth-child(5) h2 span {
+  color: #FCBC44;
+}
 .contact-form {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,8 @@
         <div class="col-md-3 offset-md-1 instrument-container"> 
             <div class="row">
                 <div class="col-md-3">
-                <?php the_post_thumbnail(); ?></div>
+                    <?php the_post_thumbnail(); ?>
+                </div>
                 <div class="col-md-9">
                     <h2><?php the_title(); ?></h2>			
                     <?php the_excerpt(); ?>
