@@ -122,33 +122,26 @@ input[type="email"]::placeholder {
 .atelier-container .primary-button {
   margin: 0 auto;
 }
-.instruments-container .instrument-container:nth-child(1) {
-  background-color: #FF9E6E;
+.instruments-container .instrument {
+  text-align: left;
+  margin-bottom: 30px;
 }
-.instruments-container .instrument-container:nth-child(2) {
-  background-color: #E2B4FF;
+.instruments-container .instrument .intrument-infos {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.instruments-container .instrument-container:nth-child(3) {
-  background-color: #FFA800;
+.instruments-container .instrument .intrument-infos span {
+  display: block;
+  font-weight: bold;
 }
-.instruments-container .instrument-container:nth-child(4) {
-  background-color: #F696BC;
-}
-.instruments-container .instrument-container:nth-child(5) {
-  background-color: #89E8FF;
-}
-.instruments-container .instrument-container:nth-child(6) {
-  background-color: #96FDEF;
-}
-.instruments-container .instrument-container {
-  background-color: aqua;
-  text-align: center;
-}
-.instruments-container .instrument-container h2 {
+.instruments-container .instrument h2 {
   text-transform: uppercase;
 }
-.instruments-container .instrument-container img {
-  width: 14vw;
+.instruments-container .instrument img {
+  max-width: 9vw;
+  max-height: 220px;
   height: auto;
 }
 .actualites-container {
@@ -162,6 +155,7 @@ input[type="email"]::placeholder {
   position: relative;
   z-index: 5;
   padding: 0 250px;
+  margin: 150px 0 100px 0;
 }
 .actualites-container::before {
   content: '';

@@ -2,27 +2,38 @@
 
 .instruments-container {
 
-    & .instrument-container:nth-child(1) { background-color: @bois;        }  
-    & .instrument-container:nth-child(2) { background-color: @cuivres;     }  
-    & .instrument-container:nth-child(3) { background-color: @chant;       }  
-    & .instrument-container:nth-child(4) { background-color: @claviers;    }  
-    & .instrument-container:nth-child(5) { background-color: @cordes;      }  
-    & .instrument-container:nth-child(6) { background-color: @percussions; }  
+    // .instrument-container:nth-child(1) { background-color: @bois;        }  
+    // .instrument-container:nth-child(2) { background-color: @cuivres;     }  
+    // .instrument-container:nth-child(3) { background-color: @chant;       }  
+    // .instrument-container:nth-child(4) { background-color: @claviers;    }  
+    // .instrument-container:nth-child(5) { background-color: @cordes;      }  
+    // .instrument-container:nth-child(6) { background-color: @percussions; }  
 
-    .instrument-container {
-        background-color: aqua;
-        text-align: center;
+    .instrument {
+        text-align: left;
+        margin-bottom: 30px;
         
+        .intrument-infos {
+            background-color: yellow;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+    
+            span {
+                display: block;
+                font-weight: bold;
+
+            }
+        }
+
         h2 {
             text-transform: uppercase;
         }
 
         img {
-            width: 14vw;
+            max-width: 9vw;
+            max-height: 220px;
             height: auto;
-            // position: relative;
-            // right: 155px;
-            // bottom: 50px;
         }
         
     }
