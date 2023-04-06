@@ -102,26 +102,26 @@
 
     }
 
-    function wp_custom_post_dates() {
+    function wp_custom_post_actualites() {
 
         $labels = array(
-            'name'                => _x('Dates', 'Post Type General Name'),
-            'singular_name'       => _x('Date', 'Post Type Singular Name'),
-            'menu_name'           => __('Dates'),
-            'all_items'           => __('Toutes les dates'),
-            'view_item'           => __('Voir les dates'),
-            'add_new_item'        => __('Ajouter une nouvelle date'),
+            'name'                => _x('Actualités', 'Post Type General Name'),
+            'singular_name'       => _x('Actualité', 'Post Type Singular Name'),
+            'menu_name'           => __('Actualité'),
+            'all_items'           => __('Toutes les actualités'),
+            'view_item'           => __('Voir les actualités'),
+            'add_new_item'        => __('Ajouter une nouvelle actualités'),
             'add_new'             => __('Ajouter'),
-            'edit_item'           => __('Editer une date'),
-            'update_item'         => __('Modifier une date'),
-            'search_items'        => __('Rechercher une date'),
+            'edit_item'           => __('Editer une actualités'),
+            'update_item'         => __('Modifier une actualités'),
+            'search_items'        => __('Rechercher une actualités'),
             'not_found'           => __('Non trouvée'),
             'not_found_in_trash'  => __('Non trouvée dans la corbeille'),
         );
         
         $args = array(
-            'label'               => __('Dates'),
-            'description'         => __('Toutes les dates'),
+            'label'               => __('Actualités'),
+            'description'         => __('Toutes les actualités'),
             'labels'              => $labels,
             'menu_icon'           => 'dashicons-calendar-alt',
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
@@ -129,16 +129,16 @@
             'hierarchical'        => false,
             'public'              => true,
             'has_archive'         => true,
-            'rewrite'			  => array( 'slug' => 'les-dates'),
+            'rewrite'			  => array( 'slug' => 'les-actualites'),
         );
         
-        register_post_type( 'dates', $args );
+        register_post_type( 'actualites', $args );
 
     }
 
     add_action( 'init', 'wp_custom_post_instruments', 0);
     add_action( 'init', 'wp_custom_post_ateliers'   , 0);
     add_action( 'init', 'wp_custom_post_professeurs', 0);
-    add_action( 'init', 'wp_custom_post_dates'      , 0);
+    add_action( 'init', 'wp_custom_post_actualites' , 0);
 
 ?>

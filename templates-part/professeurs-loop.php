@@ -1,4 +1,4 @@
-<div class="post-container">
+<div>
     <?php
     
     $query = new WP_Query( array( 'post_type' => 'professeurs') ); 
