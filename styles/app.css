@@ -125,12 +125,14 @@ input[type="email"]::placeholder {
 .instruments-container .instrument {
   text-align: left;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 .instruments-container .instrument .intrument-infos {
-  background-color: yellow;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-top: 45px;
 }
 .instruments-container .instrument .intrument-infos span {
   display: block;
@@ -143,6 +145,16 @@ input[type="email"]::placeholder {
   max-width: 9vw;
   max-height: 220px;
   height: auto;
+}
+.instruments-container .instrument::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 75%;
+  height: 150px;
+  background-color: green;
+  z-index: -1;
 }
 .actualites-container {
   background-color: #651F59;

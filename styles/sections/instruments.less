@@ -2,27 +2,21 @@
 
 .instruments-container {
 
-    // .instrument-container:nth-child(1) { background-color: @bois;        }  
-    // .instrument-container:nth-child(2) { background-color: @cuivres;     }  
-    // .instrument-container:nth-child(3) { background-color: @chant;       }  
-    // .instrument-container:nth-child(4) { background-color: @claviers;    }  
-    // .instrument-container:nth-child(5) { background-color: @cordes;      }  
-    // .instrument-container:nth-child(6) { background-color: @percussions; }  
-
     .instrument {
         text-align: left;
         margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
         
         .intrument-infos {
-            background-color: yellow;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            padding-top: @instrument-gap;
     
             span {
                 display: block;
                 font-weight: bold;
-
             }
         }
 
@@ -35,6 +29,27 @@
             max-height: 220px;
             height: auto;
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 75%;
+            height: 150px;
+            background-color: green;
+            z-index: -1;
+            // margin-top: 45px;
+        }
+
+
+        // TODO faire avec variable php pour donner classes a chacunes
+        // :nth-child(1)::after { background-color: @bois;        }  
+        // :nth-child(2)::after { background-color: @cuivres;     }  
+        // :nth-child(3)::after { background-color: @chant;       }  
+        // :nth-child(4)::after { background-color: @claviers;    }  
+        // :nth-child(5)::after { background-color: @cordes;      }  
+        // :nth-child(6)::after { background-color: @percussions; }  
         
     }
 }
