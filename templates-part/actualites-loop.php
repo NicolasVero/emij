@@ -11,7 +11,7 @@
         
         <article class="<?= "actualite actualite_$i"; ?>"> 
             <div class= <?= "actualite-infos actualite-infos_$i"; ?>>
-                <aside><p>Le <?= get_the_date(); ?></p></aside>
+                <aside><p class="actualite-date">Le <?= get_the_date(); ?></p></aside>
                 <h2><?php the_title(); ?></h2>			
                 <?php the_excerpt(); ?>
                 <!-- <a href=<?php //the_permalink(); ?>>En savoir plus</a> -->

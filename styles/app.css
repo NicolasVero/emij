@@ -32,6 +32,9 @@ html,
 body {
   background-color: #FFFFFF;
 }
+h2 {
+  text-transform: uppercase;
+}
 .primary-button,
 .secondary-button {
   padding: 15px 30px;
@@ -51,9 +54,12 @@ body {
 .secondary-button {
   background-color: #FFFFFF;
   color: #FCBC44;
+  border: 2px solid #FCBC44;
+  transition: 0.3s;
 }
 .secondary-button:hover {
-  color: green;
+  color: #CB5C2F;
+  border-color: #CB5C2F;
 }
 input[type=text],
 input[type="email"] {
@@ -136,6 +142,9 @@ input[type="email"]::placeholder {
   justify-content: center;
   height: 100%;
 }
+.ateliers-container .atelier .atelier-infos h2 {
+  font-weight: 100;
+}
 .ateliers-container .atelier:nth-child(odd) {
   flex-direction: column-reverse;
 }
@@ -194,9 +203,6 @@ input[type="email"]::placeholder {
 .instruments-container p {
   text-align: center;
 }
-.instruments-container h2 {
-  text-transform: uppercase;
-}
 .instruments-container .instrument {
   text-align: left;
   margin-bottom: 30px;
@@ -214,7 +220,6 @@ input[type="email"]::placeholder {
   font-weight: bold;
 }
 .instruments-container .instrument h2 {
-  text-transform: uppercase;
   padding-top: 15px;
   text-align: left;
 }
@@ -311,6 +316,9 @@ input[type="email"]::placeholder {
   flex-direction: column;
   padding: 15px;
 }
+.actualites-container .actualite .actualite-infos .actualite-date {
+  font-size: 3rem;
+}
 .actualites-container .actualite .actualite-infos p:not(:first-of-type) {
   overflow: hidden;
 }
@@ -353,14 +361,17 @@ input[type="email"]::placeholder {
 .actualites-container .actualite_4 div:first-of-type h2 {
   color: #FCBC44;
 }
-.actualites-container h2 {
+.actualites-container .actualite_4 + h2 {
   color: #FFFFFF;
   grid-area: 3 / 3 / 4 / 5;
-  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
-.actualites-container h2 span {
+.actualites-container .actualite_4 + h2 span {
   color: #FCBC44;
   display: block;
+  font-size: 4rem;
+  font-weight: 100;
 }
 .contact-form {
   display: flex;
@@ -371,6 +382,7 @@ input[type="email"]::placeholder {
   height: 430px;
   z-index: 5;
   padding: 0;
+  margin-bottom: 150px;
 }
 .contact-form::before {
   content: '';
@@ -384,6 +396,8 @@ input[type="email"]::placeholder {
 }
 .contact-form h2 {
   color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: 100;
 }
 .contact-form form p {
   display: flex;
@@ -400,4 +414,25 @@ input[type="email"]::placeholder {
 .contact-form form label span {
   color: #FFFFFF;
   max-width: 600px;
+}
+.pages-container {
+  display: flex;
+  justify-content: space-around;
+}
+.pages-container .a-propos {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pages-container .a-propos img {
+  width: 100%;
+  object-fit: cover;
+}
+.pages-container .nous-trouver {
+  width: 40%;
+}
+.pages-container h2 {
+  font-size: 4rem;
+  font-weight: 100;
 }
