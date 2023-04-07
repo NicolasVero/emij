@@ -30,7 +30,7 @@
             height: auto;
         }
 
-        &::after {
+        &::before {
             content: '';
             position: absolute;
             right: 0;
@@ -39,17 +39,28 @@
             height: 150px;
             background-color: green;
             z-index: -1;
-            // margin-top: 45px;
+            margin-top: 45px;
         }
 
+        &::after {
+            content: '';
+            position: absolute;
+            width: 75%;
+            height: 150px;
+            background-color: aqua;
+            transform: skewY(-10deg);
+            bottom: 0;
+            right: 0;
+            z-index: -1;
 
-        // TODO faire avec variable php pour donner classes a chacunes
-        // :nth-child(1)::after { background-color: @bois;        }  
-        // :nth-child(2)::after { background-color: @cuivres;     }  
-        // :nth-child(3)::after { background-color: @chant;       }  
-        // :nth-child(4)::after { background-color: @claviers;    }  
-        // :nth-child(5)::after { background-color: @cordes;      }  
-        // :nth-child(6)::after { background-color: @percussions; }  
+        }
         
     }
+
+    .instrument_1::before, .instrument_1::after { background-color: @bois;        }  
+    .instrument_2::before, .instrument_2::after { background-color: @cuivres;     }  
+    .instrument_3::before, .instrument_3::after { background-color: @chant;       }  
+    .instrument_4::before, .instrument_4::after { background-color: @claviers;    }  
+    .instrument_5::before, .instrument_5::after { background-color: @cordes;      }  
+    .instrument_6::before, .instrument_6::after { background-color: @percussions; }  
 }
