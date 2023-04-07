@@ -2,10 +2,11 @@
     <?php
 
         $query = new WP_Query( array( 'post_type' => 'actualites') ); 
-        $i = 1;
+        $i = 0;
 
         while ($query->have_posts()) :
             $query->the_post();
+            $i++;
         ?>   
         
         <article class="<?= "actualite actualite_$i"; ?>"> 
@@ -16,7 +17,7 @@
                 <!-- <a href=<?php //the_permalink(); ?>>En savoir plus</a> -->
             </div>
             <figure class="<?= "actualite-img actualite-img_$i" ?>">
-                <?php the_post_thumbnail(); $i++; ?>
+                <?php the_post_thumbnail(); ?>
             </figure>
         </article>
 

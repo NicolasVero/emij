@@ -115,12 +115,51 @@ input[type="email"]::placeholder {
   line-height: 0;
   transition: all 0.2s;
 }
-.atelier-container {
-  background-color: yellow;
-  text-align: center;
+.ateliers-container {
+  height: 400px;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 275px;
 }
-.atelier-container .primary-button {
+.ateliers-container .atelier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+.ateliers-container .atelier .atelier-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.ateliers-container .atelier:nth-child(odd) {
+  flex-direction: column-reverse;
+}
+.ateliers-container .atelier:nth-child(odd) img {
+  filter: opacity(20%);
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+}
+.ateliers-container .atelier:nth-child(even) img {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+.ateliers-container .atelier img {
+  width: 70%;
+  object-fit: cover;
+}
+.ateliers-container .atelier .primary-button {
   margin: 0 auto;
+}
+.ateliers-container::before {
+  content: '';
+  background-color: #F0EDF5;
+  transform: skewY(356deg);
+  width: 100%;
+  height: 560px;
+  position: absolute;
+  top: -80px;
 }
 .instruments-container .instrument {
   text-align: left;
@@ -140,11 +179,13 @@ input[type="email"]::placeholder {
 }
 .instruments-container .instrument h2 {
   text-transform: uppercase;
+  padding-top: 15px;
 }
 .instruments-container .instrument img {
   max-width: 9vw;
   max-height: 220px;
   height: auto;
+  object-fit: contain;
 }
 .instruments-container .instrument::before {
   content: '';
@@ -163,7 +204,7 @@ input[type="email"]::placeholder {
   width: 75%;
   height: 150px;
   background-color: aqua;
-  transform: skewY(-10deg);
+  transform: skewY(355deg);
   top: 95px;
   right: 0;
   z-index: -1;

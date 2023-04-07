@@ -3,14 +3,14 @@
     <?php
     
         $query = new WP_Query( array( 'post_type' => 'instruments') ); 
-        $cpt = 0;
+        $i = 0;
 
         while ($query->have_posts()) :
             $query->the_post();
-            $cpt++;
+            $i++;
         ?>   
            
-        <div class="col-4 instrument <?= "instrument_$cpt" ?>"> 
+        <div class="col-4 instrument <?= "instrument_$i" ?>"> 
             <div class="row">
                 <div class="col-6">
                     <?php the_post_thumbnail(); ?>

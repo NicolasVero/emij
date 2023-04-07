@@ -8,8 +8,6 @@
     }
 
     require_once 'inc/custompost.php';
-    require_once 'inc/metaboxes.php';
-
 
     add_action('init', 'add_menu');
     function add_menu() {
