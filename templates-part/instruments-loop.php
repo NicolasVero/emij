@@ -1,5 +1,8 @@
 <div class="container instruments-container">
-    <div class="row">
+    
+<h2>Les instruments à l'EMIJ</h2>
+<p>Lorem ipsum</p>
+<div class="row">
     <?php
     
         $query = new WP_Query( array( 'post_type' => 'instruments') ); 

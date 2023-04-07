@@ -43,9 +43,10 @@ body {
 .primary-button {
   background-color: #651F59;
   color: #FFFFFF;
+  transition: 0.3s;
 }
 .primary-button:hover {
-  color: blue;
+  color: #D9BFFF;
 }
 .secondary-button {
   background-color: #FFFFFF;
@@ -119,7 +120,7 @@ input[type="email"]::placeholder {
   height: 400px;
   position: relative;
   z-index: 5;
-  margin-bottom: 275px;
+  margin-bottom: 190px;
 }
 .ateliers-container .atelier {
   display: flex;
@@ -161,6 +162,13 @@ input[type="email"]::placeholder {
   position: absolute;
   top: -80px;
 }
+.instruments-container h2,
+.instruments-container p {
+  text-align: center;
+}
+.instruments-container h2 {
+  text-transform: uppercase;
+}
 .instruments-container .instrument {
   text-align: left;
   margin-bottom: 30px;
@@ -180,6 +188,11 @@ input[type="email"]::placeholder {
 .instruments-container .instrument h2 {
   text-transform: uppercase;
   padding-top: 15px;
+  text-align: left;
+}
+.instruments-container .instrument p {
+  text-align: left;
+  text-transform: uppercase;
 }
 .instruments-container .instrument img {
   max-width: 9vw;
@@ -208,6 +221,11 @@ input[type="email"]::placeholder {
   top: 95px;
   right: 0;
   z-index: -1;
+}
+.instruments-container .instrument_4 img,
+.instruments-container .instrument_6 img {
+  position: relative;
+  top: 60px;
 }
 .instruments-container .instrument_1::before,
 .instruments-container .instrument_1::after {
