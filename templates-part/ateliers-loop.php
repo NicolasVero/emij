@@ -14,7 +14,9 @@
                 <?php the_excerpt(); ?>
                 <a class="primary-button" href=<?php the_permalink(); ?>>En savoir plus</a>
             </div>
-            <?php the_post_thumbnail(); ?>
+            <div class="atelier-image-container">
+                <div class="atelier-image"><?php the_post_thumbnail(); ?></div>
+            </div>
         </div>
 
         <?php endwhile; wp_reset_query(); ?>

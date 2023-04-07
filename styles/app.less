@@ -24,6 +24,23 @@
 @components-height: 50px;
 @instrument-gap: 45px;
 
+// Fonctions
+.clip-path-haut() {
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+}
+
+.clip-path-bas() {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+.degrade-jaune-bleu() {
+    background: linear-gradient(17deg, rgba(252,188,68,0.5) 0%, rgba(137,232,255,0.5) 100%);
+}
+
+.degrade-violet-rose() {
+    background: linear-gradient(17deg, rgba(255,105,113,0.5) 0%, rgba(195,114,255,0.5) 100%);
+}
+
 // Typographie
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
 
