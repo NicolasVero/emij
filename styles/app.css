@@ -250,7 +250,7 @@ input[type="email"]::placeholder {
   width: 75%;
   height: 150px;
   background-color: aqua;
-  transform: skewY(355deg);
+  transform: skewY(356deg);
   top: 95px;
   right: 0;
   z-index: -1;
@@ -453,5 +453,8 @@ input[type="email"]::placeholder {
   background: linear-gradient(17deg, #ff6971 0%, #fcbc44 50%);
   top: -100px;
   z-index: -1;
-  transform: skewY(355deg);
+  transform: skewY(356deg);
+}
+.slider h2 {
+  transform: rotate(356deg);
 }
