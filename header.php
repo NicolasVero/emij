@@ -9,8 +9,4 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>header</h1>
-    </header>
-
     <main>

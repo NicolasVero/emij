@@ -10,7 +10,7 @@
         
     <div> 
         <h2><?php the_title(); ?></h2>			
-        <?php the_excerpt(); the_post_thumbnail(); 
+        <?php the_post_thumbnail(); 
         the_field('instruments');
         
         if( have_rows('choix-horaire') ) {
