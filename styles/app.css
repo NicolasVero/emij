@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @font-face {
   font-family: 'Oswald';
   font-style: normal;
@@ -134,6 +135,7 @@ input[type="email"]::placeholder {
   align-items: center;
   justify-content: space-between;
   z-index: 5;
+  gap: 15px;
 }
 .ateliers-container .atelier .atelier-infos {
   display: flex;
@@ -440,21 +442,53 @@ input[type="email"]::placeholder {
   font-size: 4rem;
   font-weight: 100;
 }
-.slider {
+header svg {
+  z-index: 6;
+  position: relative;
+  top: 35px;
+}
+header div {
+  z-index: 6;
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 250px;
+  height: 65px;
+  top: 0;
+  left: 270px;
+}
+header div::after {
+  content: '';
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transform: skewY(356deg);
+  background-color: #FFFFFF;
+  z-index: -1;
+}
+header div p {
+  font-weight: bold;
+  font-size: 25px;
+}
+.sliders {
+  padding: 0;
+}
+.sliders .slider {
   margin-bottom: 250px;
   position: relative;
   z-index: 5;
 }
-.slider::before {
+.sliders .slider::before {
   content: '';
   position: absolute;
   width: 100%;
-  height: 200px;
+  height: 450px;
   background: linear-gradient(17deg, #ff6971 0%, #fcbc44 50%);
-  top: -100px;
+  top: -260px;
   z-index: -1;
   transform: skewY(356deg);
 }
-.slider h2 {
+.sliders .slider h2 {
   transform: rotate(356deg);
 }

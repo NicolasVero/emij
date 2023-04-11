@@ -1,3 +1,4 @@
+<?php $directory = get_stylesheet_directory(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,4 +10,14 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <? include "$directory/assets/svg/logo.php"; ?>
+
+        <div>
+            <p>00.00.00.00.00</p>
+            <p>contact@emij.fr</p>
+        </div>
+
+
+    </header>
     <main>
