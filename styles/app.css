@@ -128,9 +128,6 @@ input[type="email"]::placeholder {
   z-index: 5;
   margin-bottom: 190px;
 }
-.ateliers-container div {
-  display: flex;
-}
 .ateliers-container .atelier {
   display: flex;
   flex-direction: column;
@@ -427,7 +424,7 @@ input[type="email"]::placeholder {
   max-width: 600px;
 }
 .pages-container .a-propos {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;

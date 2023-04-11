@@ -1,5 +1,6 @@
 <div class="ateliers-container">
     <div class="container">
+        <div class="row">
     <?php
     
         $query = new WP_Query( array( 'post_type' => 'ateliers') ); 
@@ -8,7 +9,7 @@
             $query->the_post();
         ?>   
            
-        <div class="col-md-3 atelier"> 
+        <div class="col-3 atelier"> 
             <div class="atelier-infos">
                 <h2><?php the_title(); ?></h2>			
                 <?php the_excerpt(); ?>
@@ -19,4 +20,5 @@
 
         <?php endwhile; wp_reset_query(); ?>
     </div>
+</div>
 </div>
