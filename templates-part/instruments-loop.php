@@ -1,5 +1,6 @@
-<div class="container instruments-container">
-    
+<div class="instruments-container">
+<div class="container">    
+
 <h2>Les instruments à l'EMIJ</h2>
 <p>Lorem ipsum</p>
 <div class="row">
@@ -36,3 +37,4 @@
         <?php endwhile; wp_reset_query(); ?>
     </div>
 </div>
+        </div>

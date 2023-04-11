@@ -1,5 +1,5 @@
-<div class="row ateliers-container">
-    <!-- <div class="row"> -->
+<div class="ateliers-container">
+    <div class="container">
     <?php
     
         $query = new WP_Query( array( 'post_type' => 'ateliers') ); 
@@ -14,11 +14,9 @@
                 <?php the_excerpt(); ?>
                 <a class="primary-button" href=<?php the_permalink(); ?>>En savoir plus</a>
             </div>
-            <div class="atelier-image-container">
-                <div class="atelier-image"><?php the_post_thumbnail(); ?></div>
-            </div>
+            <figure class="atelier-image"><?php the_post_thumbnail(); ?></figure>
         </div>
 
         <?php endwhile; wp_reset_query(); ?>
+    </div>
 </div>
-<!-- </div> -->
