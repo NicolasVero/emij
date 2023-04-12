@@ -2,6 +2,13 @@
 @font-face {
   font-family: 'Oswald';
   font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs13FvgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs169vgUE.ttf) format('truetype');
@@ -145,7 +152,7 @@ input[type="email"]::placeholder {
   height: 100%;
 }
 .ateliers-container .atelier .atelier-infos h2 {
-  font-weight: 100;
+  font-weight: 300;
 }
 .ateliers-container .atelier:nth-child(odd) {
   flex-direction: column-reverse;
@@ -202,7 +209,7 @@ input[type="email"]::placeholder {
 .instruments-container h2,
 .instruments-container p {
   text-align: center;
-  font-weight: 100;
+  font-weight: 300;
 }
 .instruments-container .instrument {
   text-align: left;
@@ -322,7 +329,7 @@ input[type="email"]::placeholder {
 }
 .actualites-container .actualites-grid .actualite .actualite-infos .actualite-date {
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
 }
 .actualites-container .actualites-grid .actualite .actualite-infos h2 {
@@ -381,7 +388,7 @@ input[type="email"]::placeholder {
   color: #FCBC44;
   display: block;
   font-size: 4rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 .contact-form {
   display: flex;
@@ -407,7 +414,7 @@ input[type="email"]::placeholder {
 .contact-form h2 {
   color: #FFFFFF;
   font-size: 4rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 .contact-form form p {
   display: flex;
@@ -440,7 +447,7 @@ input[type="email"]::placeholder {
 }
 .pages-container h2 {
   font-size: 4rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 header {
   z-index: 8;
@@ -515,13 +522,14 @@ header div p i {
 .sliders .slider .slider-elements-container div h2 {
   font-size: 100px;
   transform: skewY(356deg);
-  font-weight: 100;
   letter-spacing: -2px;
   line-height: 100px;
+  font-weight: 300;
 }
 .sliders .slider .slider-elements-container div h2 span {
   display: block;
   font-weight: initial;
+  font-weight: 500;
 }
 .sliders .slider .slider-elements-container figure {
   position: relative;

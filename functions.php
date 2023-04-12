@@ -11,10 +11,15 @@
     require_once 'inc/formating-content.php';
 
     // Ajout d'une zone de menu
-    add_action('init', 'add_menu');
     function add_menu() {
-        register_nav_menu('menu', 'Zone de création d\'un menu');
+        register_nav_menus(
+            array(
+                'enseignement_1' => ('Enseignement 1'),
+                'enseignement_2' => ('Enseignement 2'),
+            )
+        );
     }
+    add_action('init', 'add_menu');
 
     //! Regarder
     function mytheme_post_thumbnails() {

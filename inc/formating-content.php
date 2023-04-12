@@ -14,11 +14,13 @@ function the_excerpt_posttypes($charlength) {
 			echo '<p class="excerpt-article">';
 			echo mb_substr( $subex, 0, $excut );
 			echo '[...]</p>';
-		} else {
+        }
+             else {
 			echo '<p class="excerpt-article">' . $subex . '[...]</p>';
 		}
-		//echo '<span class="button"><i class="ti-arrow-right"></i>En savoir plus</span>';
-	} else {
+		echo '<span class="button"><i class="ti-arrow-right"></i>En savoir plus</span>';
+	} 
+    else {
 		echo '<p class="excerpt-article">' . $excerpt . '[...]</p>';
 	}
 }

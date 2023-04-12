@@ -21,12 +21,8 @@
                 </div>
                 <div class="intrument-infos col-6">
 
-                    <?php
-                        $titre   = get_the_title();
-                        $prefixe = ($titre == "chant") ? "Le" : "Les";
-                    ?>
-
-                    <h2><?= "$prefixe <span>$titre</span>" ?></h2>
+                    <?php $titre = explode(" ", get_the_title()); ?>
+                    <h2><?= $titre[0] ?><span><?= isset($titre[1]) ? $titre[1] : "" ?></span></h2>	
                 		
                     <?php the_excerpt(); ?>
                     <a class="primary-button" href=<?php the_permalink(); ?>>En savoir plus</a>

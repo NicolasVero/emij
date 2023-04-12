@@ -24,7 +24,7 @@
 @main-title-size: 100px;
 @components-height: 50px;
 @instrument-gap: 45px;
-@title-weight: 100;
+@title-weight: 300;
 
 // Fonctions
 .clip-path-haut() { clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%); }
@@ -40,7 +40,7 @@
 .rotate() { transform: rotate(356deg); }
 
 // Typographie
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 
@@ -152,13 +152,13 @@ header {
                 h2 {
                     font-size: @main-title-size;
                     transform: skewY(356deg);
-                    font-weight: @title-weight;
                     letter-spacing: -2px;
                     line-height: 100px;
-                    
+                    font-weight: @title-weight;
                     span {
                         display: block;
                         font-weight: initial;
+                        font-weight: 500;
                     }
                 }
             }
