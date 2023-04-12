@@ -21,6 +21,7 @@
 @percussions: #96FDEF;
 
 // Variables 
+@main-title-size: 100px;
 @components-height: 50px;
 @instrument-gap: 45px;
 @title-weight: 100;
@@ -39,7 +40,7 @@
 .rotate() { transform: rotate(356deg); }
 
 // Typographie
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 
@@ -78,13 +79,14 @@ header {
         height: 65px;
         top: 0;
         left: 270px;
+        padding-left: 15px;
 
         &::after {
             content: '';
             width: 100%;
             height: 40px;
             position: absolute;
-            bottom: -10px;
+            bottom: -20px;
             left: 0;
             .skew();
             background-color: @white;
@@ -94,7 +96,17 @@ header {
         p {
             font-weight: bold;
             font-size: 25px;
+        
+            &:first-of-type {
+                margin-bottom: 0;
+            }
+
+            i {
+                padding-right: 15px;
+            }
         }
+
+
         
     }
 }
@@ -107,7 +119,6 @@ header {
     padding: 0;
 
     .slider {
-        // .degrade-slider-1();
         margin-bottom: 250px;
         position: relative;
         z-index: 5;
@@ -117,15 +128,45 @@ header {
             position: absolute;
             width: 100%;
             height: 450px;
-            .degrade-slider-1();
+            .degrade-slider-3();
             top: -260px;
             z-index: -1;
             .skew();
             
         }
+
+        .slider-elements-container {
+
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+                margin-top: -95px;
+
+                h2 {
+                    font-size: @main-title-size;
+                    transform: skewY(356deg);
+                    font-weight: @title-weight;
+                    letter-spacing: -2px;
+                    line-height: 100px;
+                    
+                    span {
+                        display: block;
+                        font-weight: initial;
+                    }
+                }
+            }
         
-        h2 {
-        .rotate();
+        img {
+            margin-top: -95px;
+            width: 265px;
+        }
     }
+
+    
 }
 }

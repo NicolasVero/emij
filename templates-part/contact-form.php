@@ -1,5 +1,5 @@
 
-<section class="row">
+<section>
 <div class="contact-form col-12">
 
     <h2>RESTEZ INFORMÉ</h2>

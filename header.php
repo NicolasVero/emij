@@ -14,8 +14,8 @@
         <? include "$directory/assets/svg/logo.php"; ?>
 
         <div>
-            <p>00.00.00.00.00</p>
-            <p>contact@emij.fr</p>
+            <p><i class="fas fa-phone-alt"></i> 00.00.00.00.00</p>
+            <p><i class="fas fa-envelope"></i> contact@emij.fr</p>
         </div>
 
 
