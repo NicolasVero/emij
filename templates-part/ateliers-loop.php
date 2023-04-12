@@ -7,6 +7,9 @@
 
         while ($query->have_posts()) :
             $query->the_post();
+
+            global $post;
+            if(count(get_post_ancestors($post)) == 0) :
         ?>   
            
         <div class="col-3 atelier"> 
@@ -18,7 +21,7 @@
             <figure class="atelier-image"><?php the_post_thumbnail(); ?></figure>
         </div>
 
-        <?php endwhile; wp_reset_query(); ?>
+        <?php endif; endwhile; wp_reset_query(); ?>
     </div>
 </div>
 </div>

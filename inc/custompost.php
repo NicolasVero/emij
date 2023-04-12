@@ -56,11 +56,11 @@
             'description'         => __('Toutes les ateliers'),
             'labels'              => $labels,
             'menu_icon'           => 'dashicons-admin-generic',
-            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'page-attributes' ),
             'show_in_rest'        => true,
-            'hierarchical'        => false,
+            'hierarchical'        => true,
             'public'              => true,
-            'has_archive'         => true,
+            'has_archive'         => false,
             'rewrite'			  => array( 'slug' => 'les-ateliers'),
         );
         
