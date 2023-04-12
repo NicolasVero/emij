@@ -16,6 +16,7 @@
             array(
                 'enseignement_1' => ('Enseignement 1'),
                 'enseignement_2' => ('Enseignement 2'),
+                'ecole'          => ('Ecole')
             )
         );
     }
@@ -38,5 +39,23 @@
         add_meta_box('postexcerpt', __('Extrait'), 'post_excerpt_meta_box', 'page', 'normal', 'core');
     }
     add_action( 'admin_menu', 'wpc_excerpt_pages' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
