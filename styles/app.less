@@ -53,129 +53,13 @@
 @import url("sections/actualites.less");
 @import url("sections/contact.less");
 @import url("sections/pages.less");
+@import url("sections/header.less");
+@import url("sections/slider.less");
 
 
 
 
+//! temp
+//* menu.less
 
 
-
-
-
-// ! temp 
-//? header.less
-header {
-
-    z-index: 8;
-    position: relative;
-
-    svg {
-        z-index: 6;
-        position: relative;
-        top: 35px;
-    }
-    
-    div {
-        z-index: 6;
-        position: absolute; 
-        background-color: @white;
-        width: 250px;
-        height: 65px;
-        top: 0;
-        left: 270px;
-        padding-left: 15px;
-
-        &::after {
-            content: '';
-            width: 100%;
-            height: 40px;
-            position: absolute;
-            bottom: -20px;
-            left: 0;
-            .skew();
-            background-color: @white;
-            z-index: -1;
-        }
-
-        p {
-            font-weight: bold;
-            font-size: 25px;
-        
-            &:first-of-type {
-                margin-bottom: 0;
-            }
-
-            i {
-                padding-right: 15px;
-            }
-        }
-    }
-}
-
-
-
-//? slider.less
-.sliders {
-
-    padding: 0;
-    z-index: 6;
-    position: relative;
-
-    .slider {
-        position: relative;
-        z-index: 5;
-        
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 450px;
-            .degrade-slider-3();
-            top: -260px;
-            z-index: -1;
-            .skew();
-            
-        }
-
-        .slider-elements-container {
-
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-
-            div {
-                display: flex;
-                flex-direction: column;
-                gap: 60px;
-                margin-top: -95px;
-
-                h2 {
-                    font-size: @main-title-size;
-                    transform: skewY(356deg);
-                    letter-spacing: -2px;
-                    line-height: 100px;
-                    font-weight: @title-weight;
-                    span {
-                        display: block;
-                        font-weight: initial;
-                        font-weight: 500;
-                    }
-                }
-            }
-
-        figure {
-
-            position: relative;
-            top: -95px;
-            overflow: hidden;
-            height: 324px;
-            
-            img {
-                width: 300px;
-            }
-        }
-    }
-
-    
-}
-}
