@@ -80,6 +80,16 @@ input[type=text]::placeholder,
 input[type="email"]::placeholder {
   color: #FFFFFF;
 }
+.encadre-menu {
+  background-color: transparent;
+  border: 8px solid #F0EDF5;
+  transform: skewY(356deg);
+  position: absolute;
+  left: 825px;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+}
 .checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -518,6 +528,7 @@ header div p i {
   flex-direction: column;
   gap: 60px;
   margin-top: -95px;
+  padding-left: 171px;
 }
 .sliders .slider .slider-elements-container div h2 {
   font-size: 100px;
@@ -538,5 +549,5 @@ header div p i {
   height: 324px;
 }
 .sliders .slider .slider-elements-container figure img {
-  width: 300px;
+  width: 380px;
 }
