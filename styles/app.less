@@ -65,6 +65,10 @@
 // ! temp 
 //? header.less
 header {
+
+    z-index: 8;
+    position: relative;
+
     svg {
         z-index: 6;
         position: relative;
@@ -117,9 +121,10 @@ header {
 .sliders {
 
     padding: 0;
+    z-index: 6;
+    position: relative;
 
     .slider {
-        margin-bottom: 250px;
         position: relative;
         z-index: 5;
         
@@ -160,10 +165,17 @@ header {
                     }
                 }
             }
-        
-        img {
-            margin-top: -95px;
-            width: 265px;
+
+        figure {
+
+            position: relative;
+            top: -95px;
+            overflow: hidden;
+            height: 324px;
+            
+            img {
+                width: 300px;
+            }
         }
     }
 
