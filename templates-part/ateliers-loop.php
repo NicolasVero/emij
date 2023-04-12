@@ -3,7 +3,7 @@
         <div class="row">
     <?php
     
-        $query = new WP_Query( array( 'post_type' => 'ateliers') ); 
+    $query = new WP_Query( array( 'post_type' => 'ateliers', 'post_per_page' => -1, 'post_parent' => 0) ); 
 
         while ($query->have_posts()) :
             $query->the_post();

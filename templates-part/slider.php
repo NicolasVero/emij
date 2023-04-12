@@ -1,13 +1,12 @@
 <?php
-        $query = new WP_Query( array( 'post_type' => 'ateliers') ); 
-
+        $query = new WP_Query( array( 'post_type' => 'ateliers', 'post_per_page' => -1, 'post_parent' => 0) ); 
+// var_dump($query);
             ?><ul class="sliders"><?php
         $affiche = true;
         while ($query->have_posts()) :
             $query->the_post();
         global $post;
 
-        if(count(get_post_ancestors($post)) == 0) :
             if($affiche) :
         
         $titre = explode(" ", get_the_title());
@@ -32,6 +31,7 @@
         </li>
     <?php 
     $affiche = false; 
-    
-    endif; endif; endwhile; wp_reset_query(); ?>
+
+                        endif; 
+                        endwhile; wp_reset_query(); ?>
 </ul>

@@ -8,6 +8,7 @@
     }
 
     require_once 'inc/custompost.php';
+    require_once 'inc/formating-content.php';
 
     // Ajout d'une zone de menu
     add_action('init', 'add_menu');
