@@ -6,11 +6,12 @@
 @black:       #000000;
 
 @cyan:        #53FDDC;
-@light_purple:#D9BFFF;
 @orange:      #CB5C2F;
 @yellow:      #FCCA44;
 @dark_yellow: #FCBC44;
-@purple:      #651F59;
+@light_purple:#D9BFFF;
+@purple:      #B28FAC;
+@dark_purple: #651F59;
 @pink:        #FF6971;
 
 @bois:        #FF9E6E;
@@ -63,5 +64,46 @@
 
 //! temp
 //* menu.less
+
+.navigation-menu-container {
+    background-color: @dark_purple;
+    display: flex;
+    text-transform: uppercase;
+
+    a, h2, h3 {
+        color: @white;
+        text-decoration: none;
+    }
+    .navigation-logo {
+        background-color: green;
+    }
+
+    .navigation-menu-links {
+        display: flex;
+
+        .navigation-enseignements {
+
+            div {
+                display: flex;
+
+                .menu-enseignement_2-container {
+
+                    .sub-menu {
+                        
+                        line-height: 20px;
+                        font-weight: 100;
+                        padding-left: 0;
+
+                        a { text-transform: capitalize; }
+                    }
+                }
+            }
+        }
+
+        .navigation-ecoles {
+            background-color: rgb(9, 78, 24);
+        }
+    }
+}
 
 

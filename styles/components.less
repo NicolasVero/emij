@@ -9,7 +9,7 @@
 }
 
 .primary-button {
-    background-color: @purple;
+    background-color: @dark_purple;
     color: @white;
     transition: .3s;
 
@@ -45,13 +45,12 @@ input[type=text], input[type="email"] {
 
 .encadre-menu {
     background-color: transparent;
-    border: 8px solid #F0EDF5;
+    border: 5px solid @purple;
     .skew();
-    position: absolute;
-    left: 825px;
-    font-size: 40px;
+    font-size: 20px;
     text-transform: uppercase;
     padding: 10px 30px;
+    display: inline-block;
 }
 
 .checkbox {
@@ -103,7 +102,7 @@ input[type=text], input[type="email"] {
 .checkbox:not(:checked) + label::after,[type="checkbox"]:checked + label::after {	
     content: '✕';	
     position: absolute;	
-    top: .38em;	
+    top: 1em;	
     left: .18em;	
     font-size: 1.6em;	
     color: #CB22ED;	

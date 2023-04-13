@@ -82,13 +82,12 @@ input[type="email"]::placeholder {
 }
 .encadre-menu {
   background-color: transparent;
-  border: 8px solid #F0EDF5;
+  border: 5px solid #B28FAC;
   transform: skewY(356deg);
-  position: absolute;
-  left: 825px;
-  font-size: 40px;
+  font-size: 20px;
   text-transform: uppercase;
   padding: 10px 30px;
+  display: inline-block;
 }
 .checkbox {
   -webkit-appearance: none;
@@ -133,7 +132,7 @@ input[type="email"]::placeholder {
 [type="checkbox"]:checked + label::after {
   content: '✕';
   position: absolute;
-  top: 0.38em;
+  top: 1em;
   left: 0.18em;
   font-size: 1.6em;
   color: #CB22ED;
@@ -550,4 +549,35 @@ header div p i {
 }
 .sliders .slider .slider-elements-container figure img {
   width: 380px;
+}
+.navigation-menu-container {
+  background-color: #651F59;
+  display: flex;
+  text-transform: uppercase;
+}
+.navigation-menu-container a,
+.navigation-menu-container h2,
+.navigation-menu-container h3 {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.navigation-menu-container .navigation-logo {
+  background-color: green;
+}
+.navigation-menu-container .navigation-menu-links {
+  display: flex;
+}
+.navigation-menu-container .navigation-menu-links .navigation-enseignements div {
+  display: flex;
+}
+.navigation-menu-container .navigation-menu-links .navigation-enseignements div .menu-enseignement_2-container .sub-menu {
+  line-height: 20px;
+  font-weight: 100;
+  padding-left: 0;
+}
+.navigation-menu-container .navigation-menu-links .navigation-enseignements div .menu-enseignement_2-container .sub-menu a {
+  text-transform: capitalize;
+}
+.navigation-menu-container .navigation-menu-links .navigation-ecoles {
+  background-color: #094e18;
 }

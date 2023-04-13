@@ -1,18 +1,23 @@
 <?php
+    //? get_template_part('template-parts', 'ateliers-loop');
 
     get_header();
-    
-    include 'templates-part/slider.php';
-    include 'templates-part/ateliers-loop.php';
-    include 'templates-part/instruments-loop.php';
-    include 'templates-part/actualites-loop.php';
-    include 'templates-part/contact-form.php';
-    include 'templates-part/pages-loop.php';
-    echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
-    include 'templates-part/navigation/navigation.php';
-    echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
-    // include 'templates-part/a-propos-page.php';
 
-    // get_footer();
+
+    include 'inc/head.php';
+    
+
+
+    include 'template-parts/slider.php';
+    include 'template-parts/ateliers-loop.php';
+    include 'template-parts/instruments-loop.php';
+    include 'template-parts/actualites-loop.php';
+    include 'template-parts/contact-form.php';
+    include 'template-parts/pages-loop.php';
+    echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+    include 'template-parts/navigation/navigation.php';
+    echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+
+    get_footer();
 
 ?>

@@ -9,8 +9,8 @@ while (have_posts()) :
 	<?php the_content(); 
 	
 
-    include 'templates-part/professeurs-loop.php';
-    include 'templates-part/contact-form.php';
+    include 'template-parts/professeurs-loop.php';
+    include 'template-parts/contact-form.php';
     
 
     ?>
