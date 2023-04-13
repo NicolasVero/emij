@@ -555,10 +555,10 @@ header div p i {
   display: flex;
   text-transform: uppercase;
 }
-.navigation-menu-container a,
-.navigation-menu-container h2,
-.navigation-menu-container h3 {
+.navigation-menu-container * {
   color: #FFFFFF;
+}
+.navigation-menu-container a {
   text-decoration: none;
 }
 .navigation-menu-container .navigation-logo {
@@ -570,14 +570,15 @@ header div p i {
 .navigation-menu-container .navigation-menu-links .navigation-enseignements div {
   display: flex;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements div .menu-enseignement_2-container .sub-menu {
+.navigation-menu-container .navigation-menu-links .navigation-enseignements div .navigation-enseignement_2 {
+  background-color: #89E8FF;
   line-height: 20px;
   font-weight: 100;
   padding-left: 0;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements div .menu-enseignement_2-container .sub-menu a {
+.navigation-menu-container .navigation-menu-links .navigation-enseignements div .navigation-enseignement_2 a {
   text-transform: capitalize;
 }
-.navigation-menu-container .navigation-menu-links .navigation-ecoles {
+.navigation-menu-container .navigation-ecole {
   background-color: #094e18;
 }

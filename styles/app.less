@@ -66,14 +66,19 @@
 //* menu.less
 
 .navigation-menu-container {
+
     background-color: @dark_purple;
     display: flex;
     text-transform: uppercase;
 
-    a, h2, h3 {
+    * { 
         color: @white;
+    }
+
+    a {
         text-decoration: none;
     }
+
     .navigation-logo {
         background-color: green;
     }
@@ -84,26 +89,22 @@
         .navigation-enseignements {
 
             div {
+
                 display: flex;
-
-                .menu-enseignement_2-container {
-
-                    .sub-menu {
-                        
-                        line-height: 20px;
-                        font-weight: 100;
-                        padding-left: 0;
-
-                        a { text-transform: capitalize; }
-                    }
+                
+                .navigation-enseignement_2 {
+                    background-color: #89E8FF;
+                    line-height: 20px;
+                    font-weight: 100;
+                    padding-left: 0;
+                    
+                    a { text-transform: capitalize; }
                 }
             }
         }
+    }
 
-        .navigation-ecoles {
-            background-color: rgb(9, 78, 24);
-        }
+    .navigation-ecole {
+        background-color: rgb(9, 78, 24);
     }
 }
-
-
