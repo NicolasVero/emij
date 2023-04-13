@@ -89,6 +89,16 @@ input[type="email"]::placeholder {
   padding: 10px 30px;
   display: inline-block;
 }
+.encadre-menu-variation {
+  background-color: #FFFFFF;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  display: inline-block;
+}
+.encadre-menu-variation a {
+  color: #651F59;
+}
 .checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -550,68 +560,89 @@ header div p i {
 .sliders .slider .slider-elements-container figure img {
   width: 380px;
 }
-.navigation-menu-container {
+.navigation-container {
   background-color: #651F59;
+  padding: 25px 0;
+}
+.navigation-container a {
+  text-decoration: none;
+}
+.navigation-container .navigation-menu {
   display: flex;
   text-transform: uppercase;
   padding: 30px 100px;
 }
-.navigation-menu-container * {
+.navigation-container .navigation-menu * {
   color: #FFFFFF;
 }
-.navigation-menu-container .encadre-menu {
+.navigation-container .navigation-menu .encadre-menu {
   margin-bottom: 50px;
 }
-.navigation-menu-container dl {
+.navigation-container .navigation-menu dl {
   padding-left: 0;
 }
-.navigation-menu-container dt {
+.navigation-container .navigation-menu dt {
   font-weight: 500;
 }
-.navigation-menu-container a {
-  text-decoration: none;
-}
-.navigation-menu-container .navigation-logo {
+.navigation-container .navigation-menu .navigation-logo {
   width: 25%;
 }
-.navigation-menu-container .navigation-logo h2 {
+.navigation-container .navigation-menu .navigation-logo h2 {
   font-weight: 300;
   width: 40%;
   margin-left: 70px;
   font-size: 30px;
 }
-.navigation-menu-container .navigation-menu-links {
+.navigation-container .navigation-menu .navigation-menu-links {
   display: flex;
   width: 75%;
 }
-.navigation-menu-container .navigation-menu-links > div {
+.navigation-container .navigation-menu .navigation-menu-links > div {
   width: 100%;
 }
-.navigation-menu-container .navigation-menu-links .navigation-element-extrait {
+.navigation-container .navigation-menu .navigation-menu-links .navigation-element-extrait {
   text-transform: initial;
   font-weight: 100;
   position: relative;
   top: -5px;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements_2 {
+.navigation-container .navigation-menu .navigation-menu-links .navigation-enseignements_2 {
   line-height: 20px;
   font-weight: 100;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements_2 .menu-enseignement_2 {
+.navigation-container .navigation-menu .navigation-menu-links .navigation-enseignements_2 .menu-enseignement_2 {
   margin-top: calc(24px + 20px + 10px + 50px);
   line-height: normal;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements_2 dt:not(:first-of-type) {
+.navigation-container .navigation-menu .navigation-menu-links .navigation-enseignements_2 dt:not(:first-of-type) {
   text-transform: initial;
   font-weight: 100;
 }
-.navigation-menu-container .navigation-menu-links .navigation-ecole {
+.navigation-container .navigation-menu .navigation-menu-links .navigation-ecole {
   display: flex;
   flex-direction: column;
 }
-.navigation-menu-container .navigation-menu-links .navigation-ecole .menu-ecole {
+.navigation-container .navigation-menu .navigation-menu-links .navigation-ecole .menu-ecole {
   line-height: 28px;
 }
-.navigation-menu-container .navigation-menu-links .navigation-ecole .menu-ecole ~ span > .encadre-menu {
+.navigation-container .navigation-menu .navigation-menu-links .navigation-ecole .menu-ecole ~ span > .encadre-menu {
   margin-bottom: 25px;
+}
+.navigation-container .navigation-contact {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+.navigation-container .navigation-contact a {
+  display: flex;
+  transform: skewY(356deg);
+  gap: 10px;
+}
+.navigation-container .navigation-contact .navigation-contact-icon {
+  background-color: #C372FF;
+  width: 50px;
+  height: 87%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

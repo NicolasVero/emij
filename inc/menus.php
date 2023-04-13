@@ -1,4 +1,4 @@
-<?php
+d<?php
 
     // Ajout d'une zone de menu
     function add_menu() {
@@ -6,7 +6,8 @@
             array(
                 'enseignement_1' => ('Enseignement 1'),
                 'enseignement_2' => ('Enseignement 2'),
-                'ecole'          => ('Ecole')
+                'ecole'          => ('Ecole'),
+                'rs'             => ('Réseaux sociaux')
             )
         );
     }
@@ -16,34 +17,50 @@
     // Création du menu personnalisé
 
     function menu() {
-        $menu  = "
-                <div class=\"navigation-menu-links\">
+        return "
+                    <div class=\"navigation-menu-links\">
 
-		            <div class=\"navigation-enseignements_1\">
-			            <span><h3 class=\"encadre-menu\">Enseignements</h3></span>
-			            ";
+                        <div class=\"navigation-enseignements_1\">
+                            <span><h3 class=\"encadre-menu\"><a href=\"#\">Enseignements</a></h3></span>" .
+                            construct_menu(wp_get_nav_menu_items('enseignement_1'), 'enseignement_1') . "
+                        </div>
+                        
+                        <div class=\"navigation-enseignements_2\">" . 
+                            construct_menu(wp_get_nav_menu_items('enseignement_2'), 'enseignement_2') . "
+                        </div>
 
-        $menu .=            construct_menu(wp_get_nav_menu_items('enseignement_1'), 'enseignement_1');
-        $menu .= "</div><div class=\"navigation-enseignements_2\">";
-        $menu .=            construct_menu(wp_get_nav_menu_items('enseignement_2'), 'enseignement_2');
-
-        $menu .= "      
-                    </div>
-
-                    <div class=\"navigation-ecole\">			
-                        <span><h3 class=\"encadre-menu\">L'école</h3></span>"; 
-                    
-        $menu .=         construct_menu(wp_get_nav_menu_items('ecole'), 'ecole');
-        $menu .= "  
-                <span><h3 class=\"encadre-menu\">Actualités</h3></span>
-                <span><h3 class=\"encadre-menu\">Actions culturelles</h3></span>
-                <span><h3 class=\"encadre-menu\">Interventions scolaire</h3></span>
-        </div>
-                  
-                </div>";	
+                        <div class=\"navigation-ecole\">			
+                            <span><h3 class=\"encadre-menu\"><a href=\"#\">L'école</a></h3></span>" .
+                            construct_menu(wp_get_nav_menu_items('ecole'), 'ecole') . "
+            
+                            <span><h3 class=\"encadre-menu\"><a href=\"#\">Actualités</a></h3></span>
+                            <span><h3 class=\"encadre-menu\"><a href=\"#\">Actions culturelles</a></h3></span>
+                            <span><h3 class=\"encadre-menu\"><a href=\"#\">Interventions scolaire</a></h3></span>
+                        </div>
+                    </div>	
+                </div>
         
-        
-        return $menu;
+                <div class=\"navigation-contact\">
+
+                    <a href=\"#\">
+                        <span>
+                            <h3 class=\"encadre-menu-variation\">Contactez-nous</h3>
+                        </span>
+                        <span class=\"navigation-contact-icon\">
+                            <i class=\"fas fa-envelope\"></i>
+                        </span>
+                    </a>
+
+                    <a href=\"#\">
+                        <span>
+                            <h3 class=\"encadre-menu-variation\">Nous trouver</h3>
+                        </span>
+                        <span class=\"navigation-contact-icon\">
+                            <i class=\"fas fa-map-marker-alt\"></i>
+                        </span>
+                    </a>
+
+                </div>";
     }
 
     function construct_menu($datas, $menu) {
@@ -54,9 +71,7 @@
 
             if(($data->description) != "")
                 $s .= "<dd class='navigation-element-extrait'>" . $data->description . "</dd>";
-            
         }
 
         return $s . "</dl>";
     }
-
