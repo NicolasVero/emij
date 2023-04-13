@@ -554,31 +554,64 @@ header div p i {
   background-color: #651F59;
   display: flex;
   text-transform: uppercase;
+  padding: 30px 100px;
 }
 .navigation-menu-container * {
   color: #FFFFFF;
+}
+.navigation-menu-container .encadre-menu {
+  margin-bottom: 50px;
+}
+.navigation-menu-container dl {
+  padding-left: 0;
+}
+.navigation-menu-container dt {
+  font-weight: 500;
 }
 .navigation-menu-container a {
   text-decoration: none;
 }
 .navigation-menu-container .navigation-logo {
-  background-color: green;
+  width: 25%;
+}
+.navigation-menu-container .navigation-logo h2 {
+  font-weight: 300;
+  width: 40%;
+  margin-left: 70px;
+  font-size: 30px;
 }
 .navigation-menu-container .navigation-menu-links {
   display: flex;
+  width: 75%;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements div {
-  display: flex;
+.navigation-menu-container .navigation-menu-links > div {
+  width: 100%;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements div .navigation-enseignement_2 {
-  background-color: #89E8FF;
+.navigation-menu-container .navigation-menu-links .navigation-element-extrait {
+  text-transform: initial;
+  font-weight: 100;
+  position: relative;
+  top: -5px;
+}
+.navigation-menu-container .navigation-menu-links .navigation-enseignements_2 {
   line-height: 20px;
   font-weight: 100;
-  padding-left: 0;
 }
-.navigation-menu-container .navigation-menu-links .navigation-enseignements div .navigation-enseignement_2 a {
-  text-transform: capitalize;
+.navigation-menu-container .navigation-menu-links .navigation-enseignements_2 .menu-enseignement_2 {
+  margin-top: calc(24px + 20px + 10px + 50px);
+  line-height: normal;
 }
-.navigation-menu-container .navigation-ecole {
-  background-color: #094e18;
+.navigation-menu-container .navigation-menu-links .navigation-enseignements_2 dt:not(:first-of-type) {
+  text-transform: initial;
+  font-weight: 100;
+}
+.navigation-menu-container .navigation-menu-links .navigation-ecole {
+  display: flex;
+  flex-direction: column;
+}
+.navigation-menu-container .navigation-menu-links .navigation-ecole .menu-ecole {
+  line-height: 28px;
+}
+.navigation-menu-container .navigation-menu-links .navigation-ecole .menu-ecole ~ span > .encadre-menu {
+  margin-bottom: 25px;
 }

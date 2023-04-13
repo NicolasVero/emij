@@ -19,21 +19,26 @@
         $menu  = "
                 <div class=\"navigation-menu-links\">
 
-		            <div class=\"navigation-enseignements\">
+		            <div class=\"navigation-enseignements_1\">
 			            <span><h3 class=\"encadre-menu\">Enseignements</h3></span>
-			            <div>";
+			            ";
 
         $menu .=            construct_menu(wp_get_nav_menu_items('enseignement_1'), 'enseignement_1');
+        $menu .= "</div><div class=\"navigation-enseignements_2\">";
         $menu .=            construct_menu(wp_get_nav_menu_items('enseignement_2'), 'enseignement_2');
 
-        $menu .= "      </div>
+        $menu .= "      
                     </div>
 
                     <div class=\"navigation-ecole\">			
                         <span><h3 class=\"encadre-menu\">L'école</h3></span>"; 
                     
         $menu .=         construct_menu(wp_get_nav_menu_items('ecole'), 'ecole');
-        $menu .= "  </div>
+        $menu .= "  
+                <span><h3 class=\"encadre-menu\">Actualités</h3></span>
+                <span><h3 class=\"encadre-menu\">Actions culturelles</h3></span>
+                <span><h3 class=\"encadre-menu\">Interventions scolaire</h3></span>
+        </div>
                   
                 </div>";	
         
@@ -43,15 +48,15 @@
 
     function construct_menu($datas, $menu) {
 	
-        $s = "<ul class='navigation-$menu'>";
+        $s = "<dl class='menu-$menu'>";
         foreach($datas as $data) {
-            $s .= "<li><a href='" . $data->url . "'>$data->title</a></li>";
+            $s .= "<dt><a href='" . $data->url . "'>$data->title</a></dt>";
 
             if(($data->description) != "")
-                $s .= "<li class='navigation-element-extrait'>" . $data->description . "</li>";
+                $s .= "<dd class='navigation-element-extrait'>" . $data->description . "</dd>";
             
         }
 
-        return $s . "</ul>";
+        return $s . "</dl>";
     }
 

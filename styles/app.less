@@ -70,41 +70,81 @@
     background-color: @dark_purple;
     display: flex;
     text-transform: uppercase;
+    padding: 30px 100px;
 
     * { 
         color: @white;
     }
+
+    .encadre-menu {
+        margin-bottom: 50px;
+    }
+
+    dl {
+        padding-left: 0;
+    }
+
+    dt { font-weight: 500;}
 
     a {
         text-decoration: none;
     }
 
     .navigation-logo {
-        background-color: green;
+        width: 25%;
+
+        h2 {
+            font-weight: 300;
+            width: 40%;
+            margin-left: 70px;
+            font-size: 30px;
+        }
     }
 
     .navigation-menu-links {
         display: flex;
+        width: 75%;
 
-        .navigation-enseignements {
+        > div {
+            width: 100%;
+        }
 
-            div {
-
-                display: flex;
+        .navigation-element-extrait {
+            text-transform: initial;
+            font-weight: 100;
+            position: relative;
+            top: -5px;
+        }
                 
-                .navigation-enseignement_2 {
-                    background-color: #89E8FF;
-                    line-height: 20px;
-                    font-weight: 100;
-                    padding-left: 0;
-                    
-                    a { text-transform: capitalize; }
-                }
+        .navigation-enseignements_2 {
+            line-height: 20px;
+            font-weight: 100;
+            
+            .menu-enseignement_2 {
+                margin-top: calc(24px + 20px + 10px + 50px); 
+                line-height: normal;
+            }
+
+            dt:not(:first-of-type) {
+                text-transform: initial;
+                font-weight: 100;
             }
         }
-    }
+        
+    .navigation-ecole { 
+        display: flex;
+        flex-direction: column;
+    
+        .menu-ecole {
+            line-height: 28px;
+            
+            
+            ~ span > .encadre-menu {
+                margin-bottom: 25px;
+            }
+        }
 
-    .navigation-ecole {
-        background-color: rgb(9, 78, 24);
     }
+}
+
 }
