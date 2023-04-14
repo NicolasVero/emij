@@ -517,6 +517,9 @@ header div p i {
   position: relative;
   z-index: 5;
 }
+.sliders .slider .subtitles {
+  background-color: green;
+}
 .sliders .slider::before {
   content: '';
   position: absolute;
@@ -645,4 +648,25 @@ header div p i {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.slider-subtitles {
+  transform: skewY(356deg);
+  text-transform: uppercase;
+  font-size: 35px;
+  position: relative;
+  top: -60px;
+}
+.post {
+  position: relative;
+  top: -240px;
+  z-index: 6;
+}
+.instruments {
+  width: 80%;
+  margin-left: 20%;
+  border: 5px solid green;
+  background-color: blue;
+}
+.instruments div {
+  background-color: red;
 }

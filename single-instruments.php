@@ -2,16 +2,14 @@
 
 get_header();
 
-include 'template-parts/slider.php';
-
-
 while (have_posts()) : 
 	the_post();
 	
-    ?>   
+include 'template-parts/instruments/slider.php';
+
+?>
 	<div class="post">
 	<div class="instruments">
-        <h2><?php the_title(); ?></h2>
         <?php the_content(); ?> 
     </div>
         

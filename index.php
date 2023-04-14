@@ -8,7 +8,7 @@
     
 
 
-    include 'template-parts/slider.php';
+    include 'template-parts/index/slider.php';
     include 'template-parts/index/ateliers-loop.php';
     include 'template-parts/index/instruments-loop.php';
     include 'template-parts/index/actualites-loop.php';
