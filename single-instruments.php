@@ -8,13 +8,15 @@ include 'template-parts/slider.php';
 while (have_posts()) : 
 	the_post();
 	
-	echo '<div class="post">';
-?>   
+    ?>   
+	<div class="post">
+	<div class="instruments">
+        <h2><?php the_title(); ?></h2>
+        <?php the_content(); ?> 
+    </div>
+        
 	
-	<h2><?php the_title(); ?></h2>
-	<?php the_content(); 
-	
-
+<?php
     include 'template-parts/instruments/professeurs-loop.php';
     include 'template-parts/index/contact-form.php';
     
