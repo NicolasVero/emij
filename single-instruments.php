@@ -4,18 +4,19 @@ get_header();
 
 include 'template-parts/slider.php';
 
+
 while (have_posts()) : 
+	the_post();
 	
 	echo '<div class="post">';
-	the_post();
 ?>   
 	
 	<h2><?php the_title(); ?></h2>
 	<?php the_content(); 
 	
 
-    include 'template-parts/professeurs-loop.php';
-    include 'template-parts/contact-form.php';
+    include 'template-parts/instruments/professeurs-loop.php';
+    include 'template-parts/index/contact-form.php';
     
 
     ?>
