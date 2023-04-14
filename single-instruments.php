@@ -1,4 +1,9 @@
 <?php
+
+get_header();
+
+include 'template-parts/slider.php';
+
 while (have_posts()) : 
 	
 	echo '<div class="post">';
