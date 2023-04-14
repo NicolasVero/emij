@@ -1,5 +1,5 @@
 <ul class="sliders">
-    <li class="slider">
+    <li class="slider slider-instruments">
         <div class="container slider-elements-container">
                 <div>
                     <?php $titre = explode(" ", get_the_title()); ?>

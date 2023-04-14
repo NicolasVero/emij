@@ -513,6 +513,18 @@ header div p i {
   z-index: 6;
   position: relative;
 }
+.sliders .slider-instruments::before {
+  height: 658px !important;
+}
+.sliders .slider-instruments figure {
+  position: relative !important;
+  top: -133px !important;
+  overflow: hidden !important;
+  height: 525px !important;
+}
+.sliders .slider-instruments figure img {
+  width: auto !important;
+}
 .sliders .slider {
   position: relative;
   z-index: 5;
@@ -658,15 +670,27 @@ header div p i {
 }
 .post {
   position: relative;
-  top: -240px;
+  top: -235px;
   z-index: 6;
 }
 .instruments {
   width: 80%;
   margin-left: 20%;
-  border: 5px solid green;
-  background-color: blue;
+  background-color: #FFFFFF;
+  padding: 35px 250px 35px 35px;
 }
-.instruments div {
-  background-color: red;
+.instruments h2,
+.instruments h3 {
+  font-weight: 300;
+}
+.instruments p + div {
+  display: flex;
+  gap: 90px;
+  padding-top: 70px;
+}
+.instruments p + div div h3 {
+  text-transform: uppercase;
+}
+.instruments p + div div p {
+  font-weight: 100;
 }
