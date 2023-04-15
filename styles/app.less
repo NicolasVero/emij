@@ -98,3 +98,23 @@
         }
     }
 }
+
+.professeurs {
+    .professeur {
+        img {
+            clip-path: circle(50%);
+        }
+
+        .jours-cours {
+            display: flex;
+            gap: 45px;
+            
+        }
+
+        .present {
+            &::before {
+                content: '✓';
+            }
+        }
+    }
+}

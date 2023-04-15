@@ -695,3 +695,13 @@ header div p i {
 .instruments p + div div p {
   font-weight: 100;
 }
+.professeurs .professeur img {
+  clip-path: circle(50%);
+}
+.professeurs .professeur .jours-cours {
+  display: flex;
+  gap: 45px;
+}
+.professeurs .professeur .present::before {
+  content: '✓';
+}

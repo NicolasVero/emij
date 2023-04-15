@@ -9,40 +9,44 @@
     ?>   
         
     <div class="professeur"> 
-        <h2><?php the_title(); ?></h2>			
-        <?php the_post_thumbnail(); 
-        the_field('instruments');
-        
-        if( have_rows('choix-horaire') ) {
-            while( have_rows('choix-horaire') ) { 
-                
-                the_row();
+        <?php the_post_thumbnail(); ?>
+        <p><?php the_title(); ?></p>			
+        <?php the_field('instruments'); ?>
 
-                $presence_jours[]   = get_sub_field('presence-jours');
-                $presence_heure_d[] = get_sub_field('presence-heures-debut');
-                $presence_heure_f[] = get_sub_field('presence-heures-fin'); 
+        <h2>Jour(s) et horaires du cours</h2> 
+        <div class="jours-cours">
+            <?php
+
+            if( have_rows('choix-horaire') ) {
+                while( have_rows('choix-horaire') ) { 
+                    
+                    the_row();
+
+                    $presence_jours[]   = get_sub_field('presence-jours');
+                    $presence_heure_d[] = get_sub_field('presence-heures-debut');
+                    $presence_heure_f[] = get_sub_field('presence-heures-fin'); 
+                }
             }
-        }
 
-        $semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-        $cpt = 0;
+            $semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            $cpt = 0;
 
-        for($i = 0; $i < count($semaine); $i++) {
-            if(in_array($semaine[$i], $presence_jours)) { ?>
-                <div class='present'>
-                    <?= $semaine[$i]; ?>
-                    <?= $presence_heure_d[$cpt]; ?>
-                    <?= $presence_heure_f[$cpt]; $cpt++;?>
-                <span>
-                </div>
-            <?php } else { ?>
-                <div><?= $semaine[$i]; ?></div>
-            <?php }
-        }
-        $presence_jours   = array();
-        $presence_heure_d = array();
-        $presence_heure_f = array();
-        echo "</div>";
+            for($i = 0; $i < count($semaine); $i++) {
+                if(in_array($semaine[$i], $presence_jours)) { ?>
+                    <div class='present'>
+                        <?= $semaine[$i]; ?>
+                        <?= $presence_heure_d[$cpt]; ?>
+                        <?= $presence_heure_f[$cpt]; $cpt++;?>
+                    <span>
+                    </div>
+                <?php } else { ?>
+                    <div><?= $semaine[$i]; ?></div>
+                <?php }
+            }
+            $presence_jours   = array();
+            $presence_heure_d = array();
+            $presence_heure_f = array();
+        echo "</div></div>";
     }
 
     wp_reset_query(); ?>
