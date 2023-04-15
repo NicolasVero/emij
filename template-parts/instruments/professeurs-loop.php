@@ -1,4 +1,4 @@
-<div>
+<div class="professeurs">
     <?php
     
     $query = new WP_Query( array( 'post_type' => 'professeurs') ); 
@@ -8,7 +8,7 @@
         $query->the_post();
     ?>   
         
-    <div> 
+    <div class="professeur"> 
         <h2><?php the_title(); ?></h2>			
         <?php the_post_thumbnail(); 
         the_field('instruments');
