@@ -772,3 +772,26 @@ header div p i {
 .professeurs .present::before {
   content: '✓';
 }
+.nous-trouver span p {
+  background-color: #D9BFFF;
+  color: #FFFFFF;
+  padding: 26px 0;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.nous-trouver span::after {
+  content: '';
+  background-color: #D9BFFF;
+  display: block;
+  height: 80px;
+  width: 80px;
+  margin: -1px auto;
+  clip-path: polygon(50% 50%, 0 0, 100% 0);
+}
+.nous-trouver iframe {
+  width: 100%;
+  margin-top: -78px;
+}
