@@ -4,7 +4,7 @@
                 <div>
                     <?php $titre = explode(" ", get_the_title()); ?>
 
-                    <h2><?= $titre[0]; ?><span style="display: inline;"><?= " " . $titre[1]; ?></span></h2>
+                    <h2><?= $titre[0]; ?><span style="display: inline;"><? if(isset($titre[1])) echo " " . $titre[1]; ?></span></h2>
                     <span class="slider-subtitles"><?= the_excerpt(); ?></span>
                 </div>
                 <figure>

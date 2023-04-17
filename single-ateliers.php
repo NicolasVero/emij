@@ -9,7 +9,7 @@ include 'template-parts/instruments/slider.php';
 
 ?>
 	<div class="post">
-        <div class="instruments">
+        <div class="ateliers">
             <?php the_content(); ?> 
         </div>
 

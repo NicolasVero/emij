@@ -702,25 +702,38 @@ header div p i {
   top: -235px;
   z-index: 6;
 }
-.instruments {
+.instruments,
+.ateliers {
   width: 80%;
   margin-left: 20%;
   background-color: #FFFFFF;
   padding: 35px 250px 35px 35px;
 }
 .instruments h2,
-.instruments h3 {
+.ateliers h2,
+.instruments h3,
+.ateliers h3 {
   font-weight: 300;
 }
-.instruments p + div {
+.instruments h2 + p,
+.ateliers h2 + p {
+  color: #CB5C2F;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 35px;
+}
+.instruments p + div,
+.ateliers p + div {
   display: flex;
   gap: 90px;
   padding-top: 70px;
 }
-.instruments p + div div h3 {
+.instruments p + div div h3,
+.ateliers p + div div h3 {
   text-transform: uppercase;
 }
-.instruments p + div div p {
+.instruments p + div div p,
+.ateliers p + div div p {
   font-weight: 100;
 }
 .professeurs {
