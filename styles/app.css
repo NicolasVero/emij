@@ -409,16 +409,44 @@ input[type="email"]::placeholder {
   font-size: 4rem;
   font-weight: 300;
 }
-.contact-form {
+.contact-form,
+.contact-form-bis {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   height: 430px;
   z-index: 5;
   padding: 0;
   margin-bottom: 150px;
+}
+.contact-form h2,
+.contact-form-bis h2 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.contact-form form p,
+.contact-form-bis form p {
+  display: flex;
+  gap: 8px;
+}
+.contact-form form p input[type="submit"],
+.contact-form-bis form p input[type="submit"] {
+  height: 50px;
+}
+.contact-form form label,
+.contact-form-bis form label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contact-form form label span,
+.contact-form-bis form label span {
+  color: #651F59;
+  max-width: 600px;
+}
+.contact-form {
+  position: relative;
 }
 .contact-form::before {
   content: '';
@@ -432,39 +460,12 @@ input[type="email"]::placeholder {
 }
 .contact-form h2 {
   color: #FFFFFF;
-  font-size: 4rem;
-  font-weight: 300;
-}
-.contact-form form p {
-  display: flex;
-  gap: 8px;
-}
-.contact-form form p input[type="submit"] {
-  height: 50px;
-}
-.contact-form form label {
-  display: flex;
-  align-items: center;
-  gap: 15px;
 }
 .contact-form form label span {
   color: #FFFFFF;
-  max-width: 600px;
-}
-.contact-form-bis {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 430px;
-  z-index: 5;
-  padding: 0;
-  margin-bottom: 150px;
 }
 .contact-form-bis h2 {
   color: #D9BFFF;
-  font-size: 4rem;
-  font-weight: 300;
 }
 .contact-form-bis form input {
   border-color: #D9BFFF;
@@ -472,21 +473,8 @@ input[type="email"]::placeholder {
 .contact-form-bis form input::placeholder {
   color: #D9BFFF;
 }
-.contact-form-bis form p {
-  display: flex;
-  gap: 8px;
-}
-.contact-form-bis form p input[type="submit"] {
-  height: 50px;
-}
-.contact-form-bis form label {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
 .contact-form-bis form label span {
   color: #651F59;
-  max-width: 600px;
 }
 .pages-container .a-propos {
   width: 50%;
