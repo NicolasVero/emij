@@ -1,5 +1,5 @@
 <section>
-<div class="contact-form col-12">
+<div class="contact-form-bis col-12">
 
     <h2>RESTEZ INFORMÉ</h2>
     <p>lorem ipsum dolor eres</p>

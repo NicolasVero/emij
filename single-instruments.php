@@ -23,7 +23,7 @@ include 'template-parts/instruments/slider.php';
 <?php
     include 'template-parts/instruments/professeurs-loop.php';
     echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
-    include 'template-parts/index/contact-form.php';
+    include 'template-parts/index/contact-form-bis.php';
     
 
     ?>

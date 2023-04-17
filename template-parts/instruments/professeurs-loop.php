@@ -36,9 +36,7 @@
                 if(in_array($semaine[$i], $presence_jours)) { ?>
                     <div class='present'>
                         <?= $semaine[$i]; ?>
-                        <?= $presence_heure_d[$cpt]; ?>
-                        <?= $presence_heure_f[$cpt]; $cpt++;?>
-                    <span>
+                        <span class="horaires"><?= $presence_heure_d[$cpt] . "h à " . $presence_heure_f[$cpt] . "h"; $cpt++; ?></span>
                     </div>
                 <?php } else { ?>
                     <div><?= $semaine[$i]; ?></div>

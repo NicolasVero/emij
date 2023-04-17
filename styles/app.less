@@ -117,6 +117,12 @@
             text-transform: uppercase;
         }
 
+        p:first-of-type {
+            margin-bottom: 0px;
+            margin-top: 28px;
+            font-size: 20px;
+        }
+
         p:not(:first-of-type) {
             color: @white;
         }
@@ -127,7 +133,9 @@
     }
 
     h2 {
-        font-weight: 300    ;
+        font-weight: 300;
+        margin-top: 50px;
+        margin-bottom: 40px;
     }
 
     .jours-cours {
@@ -137,17 +145,21 @@
         & > div {
             background-color: #ffffff80;
             padding: 8px 15px;
-            /* opacity: .5; */
             font-weight: 500;
         }
 
         & > div.present {
             background-color: @white;
 
-            &::after {
-                content: ''
+            .horaires {
+                background-color:#53FDDC;
+                display: block;
+                margin: -15px;
+                margin-top: 0;
+                text-align: center;
             }
         }
+
     }
 
     .present {
@@ -156,3 +168,9 @@
         }
     }
 }
+
+
+
+
+
+
