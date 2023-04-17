@@ -695,13 +695,45 @@ header div p i {
 .instruments p + div div p {
   font-weight: 100;
 }
+.professeurs {
+  background-color: #FCBC44;
+  padding: 0 20%;
+}
+.professeurs .professeur {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.professeurs .professeur p {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.professeurs .professeur p:not(:first-of-type) {
+  color: #FFFFFF;
+}
 .professeurs .professeur img {
   clip-path: circle(50%);
 }
-.professeurs .professeur .jours-cours {
+.professeurs h2 {
+  font-weight: 300    ;
+}
+.professeurs .jours-cours {
   display: flex;
   gap: 45px;
 }
-.professeurs .professeur .present::before {
+.professeurs .jours-cours > div {
+  background-color: #ffffff80;
+  padding: 8px 15px;
+  /* opacity: .5; */
+  font-weight: 500;
+}
+.professeurs .jours-cours > div.present {
+  background-color: #FFFFFF;
+}
+.professeurs .jours-cours > div.present::after {
+  content: '';
+}
+.professeurs .present::before {
   content: '✓';
 }

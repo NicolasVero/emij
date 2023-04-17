@@ -100,21 +100,59 @@
 }
 
 .professeurs {
+
+
+    background-color: @dark_yellow;
+    padding: 0 20%;
+
     .professeur {
+
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        p:not(:first-of-type) {
+            color: @white;
+        }
+
         img {
             clip-path: circle(50%);
         }
+    }
 
-        .jours-cours {
-            display: flex;
-            gap: 45px;
-            
+    h2 {
+        font-weight: 300    ;
+    }
+
+    .jours-cours {
+        display: flex;
+        gap: 45px;
+        
+        & > div {
+            background-color: #ffffff80;
+            padding: 8px 15px;
+            /* opacity: .5; */
+            font-weight: 500;
         }
 
-        .present {
-            &::before {
-                content: '✓';
+        & > div.present {
+            background-color: @white;
+
+            &::after {
+                content: ''
             }
+        }
+    }
+
+    .present {
+        &::before {
+            content: '✓';
         }
     }
 }

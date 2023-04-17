@@ -11,8 +11,9 @@
     <div class="professeur"> 
         <?php the_post_thumbnail(); ?>
         <p><?php the_title(); ?></p>			
-        <?php the_field('instruments'); ?>
+        <p><?php the_field('instruments'); ?></p>
 
+    </div>
         <h2>Jour(s) et horaires du cours</h2> 
         <div class="jours-cours">
             <?php
@@ -46,7 +47,7 @@
             $presence_jours   = array();
             $presence_heure_d = array();
             $presence_heure_f = array();
-        echo "</div></div>";
+        echo "</div>";
     }
 
     wp_reset_query(); ?>
