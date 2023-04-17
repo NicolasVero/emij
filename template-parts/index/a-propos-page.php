@@ -8,7 +8,7 @@
        
     <h2><?php the_title(); ?></h2>			
     <?php the_excerpt(); ?>
-    <a class="secondary-button" href=<?php the_permalink(); ?>>En savoir plus</a>
+    <a class="secondary-button" href=<?php the_permalink(); ?>>Lire la suite</a>
     <?php the_post_thumbnail(); ?>
 
     <?php endwhile; wp_reset_query(); ?>

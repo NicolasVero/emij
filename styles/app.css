@@ -775,7 +775,7 @@ header div p i {
   text-align: center;
 }
 .professeurs .present::before {
-  content: '✓';
+  content: 'v';
 }
 .nous-trouver span p {
   background-color: #C372FF;
