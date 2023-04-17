@@ -416,9 +416,7 @@ input[type="email"]::placeholder {
   justify-content: center;
   align-items: center;
   height: 430px;
-  z-index: 5;
   padding: 0;
-  margin-bottom: 150px;
 }
 .contact-form h2,
 .contact-form-bis h2 {
@@ -447,6 +445,8 @@ input[type="email"]::placeholder {
 }
 .contact-form {
   position: relative;
+  margin-bottom: 150px;
+  z-index: 5;
 }
 .contact-form::before {
   content: '';
@@ -465,13 +465,16 @@ input[type="email"]::placeholder {
   color: #FFFFFF;
 }
 .contact-form-bis h2 {
-  color: #D9BFFF;
+  color: #C372FF;
 }
 .contact-form-bis form input {
-  border-color: #D9BFFF;
+  border-color: #C372FF;
 }
 .contact-form-bis form input::placeholder {
-  color: #D9BFFF;
+  color: #C372FF;
+}
+.contact-form-bis form input[type="checkbox"] {
+  border-color: #651F59;
 }
 .contact-form-bis form label span {
   color: #651F59;
@@ -722,13 +725,14 @@ header div p i {
 }
 .professeurs {
   background-color: #FCBC44;
-  padding: 0 20%;
+  padding: 50px 20%;
 }
 .professeurs .professeur {
   width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 25px;
 }
 .professeurs .professeur p {
   font-weight: 600;
@@ -763,7 +767,8 @@ header div p i {
   background-color: #FFFFFF;
 }
 .professeurs .jours-cours > div.present .horaires {
-  background-color: #53FDDC;
+  background-color: #651F59;
+  color: #FFFFFF;
   display: block;
   margin: -15px;
   margin-top: 0;
@@ -773,7 +778,7 @@ header div p i {
   content: '✓';
 }
 .nous-trouver span p {
-  background-color: #D9BFFF;
+  background-color: #C372FF;
   color: #FFFFFF;
   padding: 26px 0;
   text-align: center;
@@ -784,7 +789,7 @@ header div p i {
 }
 .nous-trouver span::after {
   content: '';
-  background-color: #D9BFFF;
+  background-color: #C372FF;
   display: block;
   height: 80px;
   width: 80px;

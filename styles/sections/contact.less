@@ -6,9 +6,7 @@
     justify-content: center;
     align-items: center;
     height: 430px;
-    z-index: 5;
     padding: 0;
-    margin-bottom: 150px;
 
     h2 {
         font-size: 4rem;
@@ -42,6 +40,8 @@
 
 .contact-form {
     position: relative;
+    margin-bottom: 150px;
+    z-index: 5;
 
     &::before {
         content: '';
@@ -72,16 +72,20 @@
 .contact-form-bis {
 
     h2 {
-        color: @light_purple;
+        color: @purple_bis;
     }
 
     form {
         input { 
-            border-color: @light_purple;
+            border-color: @purple_bis;
         
             &::placeholder {
-                color: @light_purple;
+                color: @purple_bis;
             }
+        }
+
+        input[type="checkbox"] {
+            border-color: @dark_purple;
         }
 
         label { 
