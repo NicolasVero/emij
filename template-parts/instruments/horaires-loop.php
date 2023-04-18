@@ -1,12 +1,18 @@
 <?php
 // $query = new WP_Query( array( 'post_type' => 'instruments') ); 
-    $query = new WP_Query( array( 'post_type' => 'instruments', 'posts_per_page' => 1) ); 
+$query = new WP_Query( array( 'post_type' => 'instruments', 'posts_per_page' => 1) ); 
+    
+
+
 
 
 while ($query->have_posts()) {
     $query->the_post(); 
     
-    
+    global $post;
+
+    affiche($post);
+    espace(5);
     ?>
         <h2>Jour(s) et horaires du cours</h2> 
         <div class="jours-cours">
@@ -14,8 +20,8 @@ while ($query->have_posts()) {
 
             if( have_rows('choix-horaire') ) {
                 while( have_rows('choix-horaire') ) { 
-                    
-                    the_row();
+
+                    affiche(the_row());
 
                     $presence_jours[]   = get_sub_field('presence-jours');
                     $presence_heure_d[] = get_sub_field('presence-heures-debut');

@@ -10,5 +10,6 @@
     require_once 'inc/formating-content.php';
     require_once 'inc/menus.php';
     require_once 'inc/thumbnails.php';
+    require_once 'inc/utilitaire.php';
 
 ?>
