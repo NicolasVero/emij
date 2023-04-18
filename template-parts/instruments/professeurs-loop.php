@@ -23,5 +23,6 @@
                     <?php  endif; endwhile;endif; } 
 
 echo "</div>";
+wp_reset_query();
 
 

@@ -1,31 +1,38 @@
 <?php
-// $query = new WP_Query( array( 'post_type' => 'instruments') ); 
-$query = new WP_Query( array( 'post_type' => 'instruments', 'posts_per_page' => 1) ); 
+
+$post_id = get_the_ID();
+
+$query = new WP_Query( array( 'post_type' => 'instruments', 'p' => $post_id ) ); 
+// $query = new WP_Query( array('post_type' => 'instruments')); 
     
-
-
-
+// global $post;
+// $post_slug = $post->post_name;
+// affiche($post_slug);
+// affiche($post_id);
+// affiche($post);
+// affiche($query);
 
 while ($query->have_posts()) {
     $query->the_post(); 
     
-    global $post;
-
-    affiche($post);
+    $instrument = $query->post;
+    // affiche($query);
+    // affiche($instrument);
     espace(5);
     ?>
+
         <h2>Jour(s) et horaires du cours</h2> 
         <div class="jours-cours">
             <?php
 
             if( have_rows('choix-horaire') ) {
                 while( have_rows('choix-horaire') ) { 
+                    
+                    the_row();
 
-                    affiche(the_row());
-
-                    $presence_jours[]   = get_sub_field('presence-jours');
-                    $presence_heure_d[] = get_sub_field('presence-heures-debut');
-                    $presence_heure_f[] = get_sub_field('presence-heures-fin'); 
+                    $presence_jours[]   = get_sub_field('presence-jours', $post_id );
+                    $presence_heure_d[] = get_sub_field('presence-heures-debut', $post_id);
+                    $presence_heure_f[] = get_sub_field('presence-heures-fin', $post_id); 
                 }
             }
 
@@ -46,6 +53,7 @@ while ($query->have_posts()) {
             // $presence_heure_d = array();
             // $presence_heure_f = array();
         // echo "</div>";
+        wp_reset_postdata();
     }
 
     wp_reset_query(); ?>
