@@ -105,44 +105,47 @@
         }
     }
 }
-
-.professeurs {
-
-    background-color: @dark_yellow;
+.infos {
     padding: 50px 20%;
+    background-color: @dark_yellow;
 
-    .professeur {
+    .professeurs {
 
-        width: 200px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 25px;
 
-        p {
-            font-weight: 600;
-            text-transform: uppercase;
+        .professeur {
+
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 25px;
+
+            p {
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            p:first-of-type {
+                margin-bottom: 0px;
+                margin-top: 28px;
+                font-size: 20px;
+            }
+
+            p:not(:first-of-type) {
+                color: @white;
+            }
+
+            img {
+                clip-path: circle(50%);
+            }
         }
 
-        p:first-of-type {
-            margin-bottom: 0px;
-            margin-top: 28px;
-            font-size: 20px;
+        h2 {
+            font-weight: 300;
+            margin-top: 50px;
+            margin-bottom: 40px;
         }
-
-        p:not(:first-of-type) {
-            color: @white;
-        }
-
-        img {
-            clip-path: circle(50%);
-        }
-    }
-
-    h2 {
-        font-weight: 300;
-        margin-top: 50px;
-        margin-bottom: 40px;
     }
 
     .jours-cours {
@@ -176,7 +179,6 @@
         }
     }
 }
-
 
 .nous-trouver {
     span {

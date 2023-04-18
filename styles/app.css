@@ -736,50 +736,53 @@ header div p i {
 .ateliers p + div div p {
   font-weight: 100;
 }
-.professeurs {
-  background-color: #FCBC44;
+.infos {
   padding: 50px 20%;
+  background-color: #FCBC44;
 }
-.professeurs .professeur {
+.infos .professeurs {
+  display: flex;
+}
+.infos .professeurs .professeur {
   width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 25px;
 }
-.professeurs .professeur p {
+.infos .professeurs .professeur p {
   font-weight: 600;
   text-transform: uppercase;
 }
-.professeurs .professeur p:first-of-type {
+.infos .professeurs .professeur p:first-of-type {
   margin-bottom: 0px;
   margin-top: 28px;
   font-size: 20px;
 }
-.professeurs .professeur p:not(:first-of-type) {
+.infos .professeurs .professeur p:not(:first-of-type) {
   color: #FFFFFF;
 }
-.professeurs .professeur img {
+.infos .professeurs .professeur img {
   clip-path: circle(50%);
 }
-.professeurs h2 {
+.infos .professeurs h2 {
   font-weight: 300;
   margin-top: 50px;
   margin-bottom: 40px;
 }
-.professeurs .jours-cours {
+.infos .jours-cours {
   display: flex;
   gap: 45px;
 }
-.professeurs .jours-cours > div {
+.infos .jours-cours > div {
   background-color: #ffffff80;
   padding: 8px 15px;
   font-weight: 500;
 }
-.professeurs .jours-cours > div.present {
+.infos .jours-cours > div.present {
   background-color: #FFFFFF;
 }
-.professeurs .jours-cours > div.present .horaires {
+.infos .jours-cours > div.present .horaires {
   background-color: #651F59;
   color: #FFFFFF;
   display: block;
@@ -787,7 +790,7 @@ header div p i {
   margin-top: 0;
   text-align: center;
 }
-.professeurs .present::before {
+.infos .present::before {
   content: 'v';
 }
 .nous-trouver span p {

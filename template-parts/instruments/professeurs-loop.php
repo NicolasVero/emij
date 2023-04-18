@@ -1,3 +1,4 @@
+<div class="infos">
 <div class="professeurs">
     <?php
     
@@ -22,7 +23,7 @@
     </div>
     <?php  endif; endwhile;endif; } 
 
-
+echo "</div>";
     // $query = new WP_Query( array( 'post_type' => 'instruments') ); 
     $query = new WP_Query( array( 'post_type' => 'instruments', 'posts_per_page' => 1) ); 
 
@@ -64,9 +65,9 @@ while ($query->have_posts()) {
             // $presence_jours   = array();
             // $presence_heure_d = array();
             // $presence_heure_f = array();
-        echo "</div>";
+        // echo "</div>";
     }
 
     wp_reset_query(); ?>
 </div>
-
+</div>
