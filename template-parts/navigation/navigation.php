@@ -5,6 +5,6 @@
 			<h2>École de jazz et musiques actuelles</h2>
 		</div>
 		
-		<?php if(function_exists('menu')) echo menu(); ?>
+		<?php if(function_exists('menu_navigation')) echo menu_navigation(); ?>
 	</div>
 </div>

@@ -2,9 +2,15 @@
     <li class="slider slider-instruments">
         <div class="container slider-elements-container">
                 <div>
-                    <?php $titre = explode(" ", get_the_title()); ?>
+                <?php
+                global $post;
+                     $titre = explode(" ", get_the_title()); 
 
-                    <h2><?= $titre[0]; ?><span style="display: inline;"><? if(isset($titre[1])) echo " " . $titre[1]; ?></span></h2>
+                     $style = "";
+                     if($post->post_type == "ateliers") $style = "font-weight: 300;";
+                     
+                    ?>
+                    <h2><?= $titre[0]; ?><span style="display: inline; <?= $style ?>"><? if(isset($titre[1])) echo " " . $titre[1]; ?></span></h2>
                     <span class="slider-subtitles"><?= the_excerpt(); ?></span>
                 </div>
                 <figure>

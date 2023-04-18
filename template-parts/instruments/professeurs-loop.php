@@ -13,15 +13,14 @@
         if(have_rows('cours')) :
             while( have_rows('cours') ) :
                 $nom_categorie = the_row();
-
                 if($nom_categorie == $titre_article) :
-    ?>   
-    <div class="professeur"> 
-        <?php the_post_thumbnail(); ?>
-        <p><?php the_title(); ?></p>			
-        <p><?php the_field('instruments'); ?></p>
-    </div>
-    <?php  endif; endwhile;endif; } 
+                    ?>   
+                    <div class="professeur"> 
+                        <?php the_post_thumbnail(); ?>
+                        <p><?php the_title(); ?></p>			
+                        <p><?php the_field('instruments'); ?></p>
+                    </div>
+                    <?php  endif; endwhile;endif; } 
 
 echo "</div>";
     // $query = new WP_Query( array( 'post_type' => 'instruments') ); 
@@ -33,7 +32,6 @@ while ($query->have_posts()) {
     
     
     ?>
-
         <h2>Jour(s) et horaires du cours</h2> 
         <div class="jours-cours">
             <?php
