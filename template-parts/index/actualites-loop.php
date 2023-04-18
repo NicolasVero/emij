@@ -4,7 +4,7 @@
 
     <?php
 
-        $query = new WP_Query( array( 'post_type' => 'actualites') ); 
+        $query = new WP_Query( array( 'post_type' => 'actualites', 'posts_per_page' => 4) ); 
         $i = 0;
 
         while ($query->have_posts()) :

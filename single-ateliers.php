@@ -15,6 +15,8 @@ include 'template-parts/instruments/slider.php';
 
         <?php
             include 'template-parts/instruments/professeurs-loop.php';
+            include 'template-parts/instruments/horaires-loop.php';
+            echo "</div>";
             include 'template-parts/index/contact-form-bis.php';
             include 'template-parts/instruments/nous-trouver.php';
         ?>
