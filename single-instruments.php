@@ -17,6 +17,7 @@ include 'template-parts/instruments/slider.php';
             include 'template-parts/instruments/professeurs-loop.php';
             include 'template-parts/index/contact-form-bis.php';
             include 'template-parts/instruments/nous-trouver.php';
+            // include 'template-parts/instruments/instruments.php';
         ?>
     </div>
                 

@@ -12,8 +12,20 @@
         <?php the_post_thumbnail(); ?>
         <p><?php the_title(); ?></p>			
         <p><?php the_field('instruments'); ?></p>
-
     </div>
+    <?php } 
+
+
+    // $query = new WP_Query( array( 'post_type' => 'instruments') ); 
+    $query = new WP_Query( array( 'post_type' => 'instruments', 'posts_per_page' => 1) ); 
+
+
+while ($query->have_posts()) {
+    $query->the_post(); 
+    
+    
+    ?>
+
         <h2>Jour(s) et horaires du cours</h2> 
         <div class="jours-cours">
             <?php
@@ -42,9 +54,9 @@
                     <div><?= $semaine[$i]; ?></div>
                 <?php }
             }
-            $presence_jours   = array();
-            $presence_heure_d = array();
-            $presence_heure_f = array();
+            // $presence_jours   = array();
+            // $presence_heure_d = array();
+            // $presence_heure_f = array();
         echo "</div>";
     }
 
