@@ -154,8 +154,12 @@
         
         & > div {
             background-color: #ffffff80;
-            padding: 8px 15px;
+            padding: 4px 15px 8px 15px;
             font-weight: 500;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
 
         & > div.present {
@@ -168,6 +172,7 @@
                 margin: -15px;
                 margin-top: 0;
                 text-align: center;
+                width: 100px;
             }
         }
 
@@ -176,6 +181,7 @@
     .present {
         &::before {
             content: 'v';
+            display: contents;
         }
     }
 }

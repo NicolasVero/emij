@@ -776,8 +776,12 @@ header div p i {
 }
 .infos .jours-cours > div {
   background-color: #ffffff80;
-  padding: 8px 15px;
+  padding: 4px 15px 8px 15px;
   font-weight: 500;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .infos .jours-cours > div.present {
   background-color: #FFFFFF;
@@ -789,9 +793,11 @@ header div p i {
   margin: -15px;
   margin-top: 0;
   text-align: center;
+  width: 100px;
 }
 .infos .present::before {
   content: 'v';
+  display: contents;
 }
 .nous-trouver span p {
   background-color: #C372FF;

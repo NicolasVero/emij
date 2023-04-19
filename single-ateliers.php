@@ -13,6 +13,7 @@ include 'template-parts/instruments/slider.php';
             <?php the_content(); ?> 
         </div>
 
+        <div class="infos">
         <?php
             include 'template-parts/instruments/professeurs-loop.php';
             include 'template-parts/instruments/horaires-loop.php';

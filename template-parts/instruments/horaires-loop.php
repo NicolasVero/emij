@@ -1,24 +1,11 @@
 <?php
 
 $post_id = get_the_ID();
-
-$query = new WP_Query( array( 'post_type' => 'instruments', 'p' => $post_id ) ); 
-// $query = new WP_Query( array('post_type' => 'instruments')); 
-    
-// global $post;
-// $post_slug = $post->post_name;
-// affiche($post_slug);
-// affiche($post_id);
-// affiche($post);
-// affiche($query);
+$query = new WP_Query( array( 'post_type' => array( 'instruments', 'ateliers' ), 'p' => $post_id ) ); 
 
 while ($query->have_posts()) {
-    $query->the_post(); 
-    
-    $instrument = $query->post;
-    // affiche($query);
-    // affiche($instrument);
-    espace(5);
+    $query->the_post();     
+
     ?>
 
         <h2>Jour(s) et horaires du cours</h2> 
@@ -49,11 +36,7 @@ while ($query->have_posts()) {
                     <div><?= $semaine[$i]; ?></div>
                 <?php }
             }
-            // $presence_jours   = array();
-            // $presence_heure_d = array();
-            // $presence_heure_f = array();
-        // echo "</div>";
-        wp_reset_postdata();
+        // wp_reset_postdata();
     }
 
     wp_reset_query(); ?>
