@@ -4,7 +4,6 @@
         global $post;
         $class = ($post->post_type != "instruments") ? "slider-image" : "slider-instruments";    
         $date = $post->post_modified;
-        affiche($date);
     ?> 
     <li class="slider <?= $class ?>">
         <?php    
@@ -22,13 +21,15 @@
                     $titre = explode(" ", get_the_title()); 
 
                     if($post->post_type != "instruments") $style = "font-weight: 300;";
-                     
+                    
                     ?>
                     <h2><?= $titre[0]; ?><span style="display: inline;"><? if(isset($titre[1])) echo " " . $titre[1]; ?></span></h2>
+                    <?php if($post->post_type == "actualites") { ?>
+                    <span class="slider-subtitles"><?= formateDate($date); ?></span>
+                    <?php } else { ?> 
                     <span class="slider-subtitles"><?= the_excerpt(); ?></span>
+                    <?php } ?>
 
-                    <?php
-                    ?>
                 </div>
                 <figure>
                     <?php if($class != "slider-image") { the_post_thumbnail(); } ?>     
