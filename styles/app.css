@@ -575,25 +575,25 @@ header div p i {
   width: 100% !important;
   height: 470px;
 }
-.sliders .slider-ateliers {
+.sliders .slider-image {
   height: 550px;
 }
-.sliders .slider-ateliers::before {
+.sliders .slider-image::before {
   height: 264px !important;
 }
-.sliders .slider-ateliers .image-slider {
+.sliders .slider-image .image-slider {
   clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
   position: relative;
   top: -62px;
   z-index: -2;
 }
-.sliders .slider-ateliers .image-slider img {
+.sliders .slider-image .image-slider img {
   width: 100%;
   object-fit: cover;
   height: 500px;
   clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
 }
-.sliders .slider-ateliers .image-slider::after {
+.sliders .slider-image .image-slider::after {
   content: '';
   background: linear-gradient(17deg, rgba(252, 188, 68, 0.5) 0%, rgba(137, 232, 255, 0.5) 100%);
   width: 100%;
@@ -602,13 +602,13 @@ header div p i {
   position: absolute;
   top: 0;
 }
-.sliders .slider-ateliers .slider-elements-container div {
+.sliders .slider-image .slider-elements-container div {
   margin-top: -616px !important;
   margin-bottom: 350px;
   position: relative !important;
   left: 0 !important;
 }
-.sliders .slider-ateliers .slider-elements-container div h2 span {
+.sliders .slider-image .slider-elements-container div h2 span {
   font-weight: 300 !important;
 }
 .sliders .slider {

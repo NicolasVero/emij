@@ -2,11 +2,13 @@
     <?php 
     
         global $post;
-        $class = ($post->post_type == "ateliers") ? "slider-ateliers" : "slider-instruments";    
+        $class = ($post->post_type != "instruments") ? "slider-image" : "slider-instruments";    
+        $date = $post->post_modified;
+        affiche($date);
     ?> 
     <li class="slider <?= $class ?>">
         <?php    
-            if($class == "slider-ateliers") {
+            if($class == "slider-image") {
                 echo "<figure class='image-slider'>";
                 the_post_thumbnail(); 
                 echo "</figure>";
@@ -19,7 +21,7 @@
 
                     $titre = explode(" ", get_the_title()); 
 
-                    if($post->post_type == "ateliers") $style = "font-weight: 300;";
+                    if($post->post_type != "instruments") $style = "font-weight: 300;";
                      
                     ?>
                     <h2><?= $titre[0]; ?><span style="display: inline;"><? if(isset($titre[1])) echo " " . $titre[1]; ?></span></h2>
@@ -29,7 +31,7 @@
                     ?>
                 </div>
                 <figure>
-                    <?php if($class != "slider-ateliers") { the_post_thumbnail(); } ?>     
+                    <?php if($class != "slider-image") { the_post_thumbnail(); } ?>     
                 </figure>
         </div>
     </li>

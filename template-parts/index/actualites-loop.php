@@ -18,7 +18,7 @@
                 <aside><p class="actualite-date">Le <?= get_the_date('j/m/Y'); ?></p></aside>
                 <h2><?php the_title(); ?></h2>			
                 <?php the_excerpt(); ?>
-                <!-- <a href=<?php //the_permalink(); ?>>En savoir plus</a> -->
+                <a href=<?php the_permalink(); ?>>En savoir plus</a>
             </div>
             <figure class="<?= "actualite-img actualite-img_$i" ?>">
                 <?php the_post_thumbnail(); ?>
