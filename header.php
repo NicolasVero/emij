@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <? include "$directory/assets/svg/logo.php"; ?>
+        <? include "$directory/assets/svg/logo.svg"; ?>
 
         <div>
             <p><i class="fas fa-phone-alt"></i> 00.00.00.00.00</p>
