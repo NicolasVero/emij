@@ -12,6 +12,7 @@
     include 'template-parts/index/ateliers-loop.php';
     include 'template-parts/index/instruments-loop.php';
     include 'template-parts/index/actualites-loop.php';
+    include 'template-parts/index/facebook.php';
     include 'template-parts/index/contact-form.php';
     include 'template-parts/index/pages-loop.php';
     echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
