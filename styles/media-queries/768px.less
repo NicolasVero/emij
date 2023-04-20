@@ -8,6 +8,32 @@
         // background-color: green;
     }  
     
+    header {
+        svg {
+            position: static;
+            width: 45%;
+        }
+
+        div {
+            display: none;
+        }
+    }
+
+    .sliders {
+        .slider {
+            .slider-elements-container {
+                div {
+                    h2 {
+                        font-size: 3.5rem;
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
+    }  
+
+
+
     main {
         padding: auto 5vw;
     }
@@ -112,5 +138,51 @@
 
 
 
+
+
+
+
+
+
+// ! a optimiser
+    .contact-form, .contact-form-bis {
+        height: 500px;
+        margin-bottom: 40px;
+    
+        h2 {
+            font-size: 2rem;
+        }
+    
+        form {
+            p {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                align-items: center;
+            }
+
+            p:not(:first-of-type) {
+                margin: 0 16px;
+            }
+
+        }
+    }
+
+
+    .pages-container {
+        .row {
+            flex-direction: column;
+            gap: 90px;
+
+            section {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .navigation-container {
+        display: none;
+    }
 
 }

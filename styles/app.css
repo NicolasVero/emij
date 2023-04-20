@@ -880,6 +880,17 @@ header div p i {
   margin-top: -78px;
 }
 @media screen and (max-width: 768px) {
+  header svg {
+    position: static;
+    width: 45%;
+  }
+  header div {
+    display: none;
+  }
+  .sliders .slider .slider-elements-container div h2 {
+    font-size: 3.5rem;
+    line-height: 50px;
+  }
   main {
     padding: auto 5vw;
   }
@@ -951,5 +962,35 @@ header div p i {
   }
   .actualites-container .actualites-grid h2 span {
     font-size: 3rem !important;
+  }
+  .contact-form,
+  .contact-form-bis {
+    height: 500px;
+    margin-bottom: 40px;
+  }
+  .contact-form h2,
+  .contact-form-bis h2 {
+    font-size: 2rem;
+  }
+  .contact-form form p,
+  .contact-form-bis form p {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+  }
+  .contact-form form p:not(:first-of-type),
+  .contact-form-bis form p:not(:first-of-type) {
+    margin: 0 16px;
+  }
+  .pages-container .row {
+    flex-direction: column;
+    gap: 90px;
+  }
+  .pages-container .row section {
+    width: 100%;
+  }
+  .navigation-container {
+    display: none;
   }
 }
