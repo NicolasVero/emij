@@ -2,12 +2,12 @@
     <?php 
     
         global $post;
-        $class = ($post->post_type != "instruments") ? "slider-image" : "slider-instruments";    
+        $id = ($post->post_type != "instruments") ? "slider-image" : "slider-instruments";    
         $date = $post->post_modified;
     ?> 
-    <li class="slider <?= $class ?>">
+    <li class="slider" id="<?= $id; ?>">
         <?php    
-            if($class == "slider-image") {
+            if($id == "slider-image") {
                 echo "<figure class='image-slider'>";
                 the_post_thumbnail(); 
                 echo "</figure>";
@@ -32,7 +32,7 @@
 
                 </div>
                 <figure>
-                    <?php if($class != "slider-image") { the_post_thumbnail(); } ?>     
+                    <?php if($id != "slider-image") { the_post_thumbnail(); } ?>     
                 </figure>
         </div>
     </li>
