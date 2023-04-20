@@ -8,7 +8,8 @@
                 'enseignement_2' => ('Enseignement 2'),
                 'ecole'          => ('Ecole'),
                 'rs'             => ('Réseaux sociaux'),
-                'partenaires'    => ('Partenaires')
+                'partenaires'    => ('Partenaires'),
+                'pages-footer'    => ('Pages footer'),
             )
         );
     }

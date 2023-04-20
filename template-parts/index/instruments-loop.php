@@ -14,11 +14,11 @@
             $i++;
         ?>   
            
-        <div class="col-4 instrument <?= "instrument_$i" ?>"> 
+        <div class="col-md-4 instrument <?= "instrument_$i" ?>"> 
             <div class="row">
-                <div class="col-6">
+                <figure class="col-6">
                     <?php the_post_thumbnail(); ?>
-                </div>
+                </figure>
                 <div class="intrument-infos col-6">
 
                     <?php $titre = explode(" ", get_the_title()); ?>

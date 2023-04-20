@@ -12,7 +12,7 @@
             if(count(get_post_ancestors($post)) == 0) :
         ?>   
            
-        <div class="col-3 atelier"> 
+        <div class="col-md-3 atelier"> 
             <div class="atelier-infos">
                 <h2><?php the_title(); ?></h2>			
                 <?php the_excerpt(); ?>
