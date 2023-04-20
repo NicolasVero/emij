@@ -747,71 +747,6 @@ header div p i {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
-  body {
-    background-color: green;
-  }
-  main {
-    padding: auto 5vw;
-  }
-  .ateliers-container {
-    height: 3000px;
-  }
-  .ateliers-container::before {
-    height: 1880px;
-  }
-  .ateliers-container .row {
-    gap: 65px;
-  }
-  .ateliers-container .row .atelier:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-  .ateliers-container .row .atelier .atelier-img img {
-    height: 250px;
-  }
-  .instruments-container .instrument figure img {
-    width: 100%;
-    max-width: none;
-  }
-  .instruments-container .instrument .intrument-infos .primary-button {
-    padding: 10px 15px;
-  }
-  .actualites-container {
-    padding: 0;
-    margin: 150px 0 2008px 0;
-  }
-  .actualites-container .actualites-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    height: 800px;
-  }
-  .actualites-container .actualites-grid .actualite {
-    max-width: 100%;
-  }
-  .actualites-container .actualites-grid .actualite img {
-    width: auto !important;
-  }
-  .actualites-container .actualites-grid .actualite_4 + h2 {
-    grid-area: 1 / 1 / 2 / 3;
-  }
-  .actualites-container .actualites-grid .actualite_4 {
-    grid-area: 2 / 1 / 3 / 3;
-  }
-  .actualites-container .actualites-grid .actualite_1 {
-    grid-area: 3 / 1 / 4 / 3;
-  }
-  .actualites-container .actualites-grid .actualite_2 {
-    grid-area: 4 / 1 / 6 / 2;
-  }
-  .actualites-container .actualites-grid .actualite_3 {
-    grid-area: 4 / 2 / 6 / 3;
-  }
-  .actualites-container .actualites-grid h2 span {
-    font-size: 3rem !important;
-  }
-}
 .slider-subtitles {
   transform: skewY(356deg);
   text-transform: uppercase;
@@ -943,4 +878,78 @@ header div p i {
 .nous-trouver iframe {
   width: 100%;
   margin-top: -78px;
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: auto 5vw;
+  }
+  .ateliers-container {
+    height: 1680px;
+  }
+  .ateliers-container::before {
+    height: 1880px;
+  }
+  .ateliers-container .row {
+    gap: 65px;
+  }
+  .ateliers-container .row .atelier:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .ateliers-container .row .atelier .atelier-img img {
+    height: 250px;
+  }
+  .instruments-container .instrument figure img {
+    width: 100%;
+    max-width: none;
+  }
+  .instruments-container .instrument .intrument-infos .primary-button {
+    padding: 10px 15px;
+  }
+  .actualites-container {
+    padding: 0;
+    margin: 150px 0 800px 0;
+  }
+  .actualites-container::before {
+    height: 200%;
+  }
+  .actualites-container .actualites-grid {
+    grid-template-columns: repeat(2, 43vw);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    height: 800px;
+  }
+  .actualites-container .actualites-grid .actualite {
+    max-width: 100%;
+  }
+  .actualites-container .actualites-grid .actualite .actualite-infos {
+    width: 100%;
+  }
+  .actualites-container .actualites-grid .actualite .actualite-infos .actualite-date {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .actualites-container .actualites-grid .actualite .actualite-infos p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .actualites-container .actualites-grid .actualite_4 + h2 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .actualites-container .actualites-grid .actualite_4 {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  .actualites-container .actualites-grid .actualite_1 {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  .actualites-container .actualites-grid .actualite_2 {
+    grid-area: 4 / 1 / 6 / 2;
+  }
+  .actualites-container .actualites-grid .actualite_3 {
+    grid-area: 4 / 2 / 6 / 3;
+  }
+  .actualites-container .actualites-grid h2 span {
+    font-size: 3rem !important;
+  }
 }
