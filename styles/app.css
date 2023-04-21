@@ -1007,7 +1007,8 @@ footer .menus-footer {
 footer {
   background-color: #651F59;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 40px 0 20px 0;
 }
 footer .menu-pages-footer a {
   color: #FFFFFF;

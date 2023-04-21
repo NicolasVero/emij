@@ -99,7 +99,7 @@
         $datas = wp_get_nav_menu_items($menu);
         
         if($menu == "partenaires")
-            $donnees = ["En partenariat avec", "elbeuf", "région normandie", "seine maritime", "ministère", "métropole"];
+            $donnees = ["En partenariat avec", "elbeuf", "region_normandie", "seine_maritime", "ministere", "metropole"];
         else
             $donnees = ["Nous suivre sur", "facebook", "youtube", "instagram"];
         
