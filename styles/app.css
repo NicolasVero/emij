@@ -557,6 +557,13 @@ header div p:first-of-type {
 header div p i {
   padding-right: 15px;
 }
+footer {
+  background-color: rebeccapurple;
+}
+footer .menus-footer {
+  background-color: red;
+  display: flex;
+}
 .sliders {
   padding: 0;
   z-index: 6;
@@ -996,4 +1003,36 @@ header div p i {
   .navigation-container {
     display: none;
   }
+}
+footer {
+  background-color: #651F59;
+  display: flex;
+  justify-content: space-between;
+}
+footer .menu-pages-footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+footer .menu-rs p {
+  color: #D9BFFF;
+  text-transform: uppercase;
+}
+footer .menu-rs .menu-rs-svg {
+  display: flex;
+  gap: 25px;
+}
+footer .menu-partenaires {
+  display: flex;
+  flex-direction: column;
+}
+footer .menu-partenaires p {
+  color: #D9BFFF;
+  text-transform: uppercase;
+}
+footer .menu-partenaires .menu-partenaires-svg {
+  display: flex;
+  align-items: end;
+  gap: 25px;
 }

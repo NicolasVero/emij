@@ -69,9 +69,12 @@
             }
 
             function menu_footer() {
-                return "<div>" . construct_menu('partenaires') . "</div>"; 
-                // construct_menu(wp_get_nav_menu_items('partenaires'), 'partenaires');
+                return 
+                    construct_menu('pages-footer') . 
+                    construct_menu_svg('rs') . 
+                    construct_menu_svg('partenaires');
             }
+
 
     function construct_menu($menu) {
 	
@@ -79,11 +82,35 @@
 
         $s = "<dl class='menu-$menu'>";
         foreach($datas as $data) {
-            $s .= "<dt><a href='" . $data->url . "'>$data->title</a></dt>";
+            $s .= "<dt><a href='" . $data->url . "' target='_blank'>$data->title</a></dt>";
 
             if(($data->description) != "")
                 $s .= "<dd class='navigation-element-extrait'>" . $data->description . "</dd>";
         }
 
         return $s . "</dl>";
+    }
+
+
+    function construct_menu_svg($menu) {
+
+        if($menu != 'partenaires' && $menu != 'rs') return;
+    
+        $datas = wp_get_nav_menu_items($menu);
+        
+        if($menu == "partenaires")
+            $donnees = ["En partenariat avec", "elbeuf", "région normandie", "seine maritime", "ministère", "métropole"];
+        else
+            $donnees = ["Nous suivre sur", "facebook", "youtube", "instagram"];
+        
+        $s = "<dl class='menu-$menu'>";
+        $s .= "<span><p>" . $donnees[0] . "</p></span><div class='menu-$menu-svg'>";
+        $cpt = 1;
+
+        foreach($datas as $data) {
+            $s .= "<dt><a href='" . $data->url . "' target='_blank'><img src='" . get_bloginfo('template_url') . "/assets/svg/" . $donnees[$cpt] .".svg'></a>";
+            $cpt++;
+        }
+
+        return $s . "</div></dl>";
     }

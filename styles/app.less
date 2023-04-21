@@ -57,9 +57,58 @@
 @import url("sections/contact.less");
 @import url("sections/pages.less");
 @import url("sections/header.less");
+@import url("sections/footer.less");
 @import url("sections/slider.less");
 @import url("sections/menu.less");
 @import url("sections/single_ateliers-instruments.less");
 
 // Medias Queries 
 @import url("media-queries/768px.less");
+
+
+
+
+footer {
+    background-color: @dark_purple;
+    display: flex;
+    justify-content: space-between;
+
+    .menu-pages-footer {
+        a {
+            color: @white;
+            text-decoration: none;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    .menu-rs {
+
+        p {
+            color: @light_purple;
+            text-transform: uppercase;
+        }
+
+        .menu-rs-svg {
+            display: flex;
+            gap: 25px;
+        }
+    }
+
+    .menu-partenaires {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            color: @light_purple;
+            text-transform: uppercase;
+        }
+
+        .menu-partenaires-svg {
+            display: flex;
+            align-items: end;
+            gap: 25px;
+        }
+    }
+    
+}
