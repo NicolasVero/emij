@@ -82,7 +82,7 @@
 
         $s = "<dl class='menu-$menu'>";
         foreach($datas as $data) {
-            $s .= "<dt><a href='" . $data->url . "' target='_blank'>$data->title</a></dt>";
+            $s .= "<dt><a href='" . $data->url . "'>$data->title</a></dt>";
 
             if(($data->description) != "")
                 $s .= "<dd class='navigation-element-extrait'>" . $data->description . "</dd>";

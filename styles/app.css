@@ -563,6 +563,9 @@ footer {
   justify-content: space-around;
   padding: 40px 0 20px 0;
 }
+footer .menu-pages-footer {
+  line-height: 35px;
+}
 footer .menu-pages-footer a {
   color: #FFFFFF;
   text-decoration: none;
@@ -925,6 +928,16 @@ footer .menu-partenaires .menu-partenaires-svg {
   width: 100%;
   margin-top: -78px;
 }
+@media screen and (max-width: 1200px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 768px) {
   header svg {
     position: static;
@@ -1041,5 +1054,10 @@ footer .menu-partenaires .menu-partenaires-svg {
   }
   .navigation-container {
     display: none;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
