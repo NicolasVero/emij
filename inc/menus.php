@@ -63,9 +63,9 @@
 
                 
             </div>
-            <div class=\"navigation-rs\">
+            <div class=\"navigation-rs\">" .
+                construct_menu_svg('rs') ."
             </div>";
-            // construct_menu(wp_get_nav_menu_items('rs'), 'rs')."
             }
 
             function menu_footer() {
