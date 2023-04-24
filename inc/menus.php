@@ -19,6 +19,7 @@
     // Création du menu personnalisé
     function menu_navigation() {
         return "
+                <div class='close-navigation'><i class=\"fas fa-times\"></i></div>
                 <div class=\"navigation-menu-links\">
 
                     <div class=\"navigation-enseignements_1\">
@@ -40,6 +41,7 @@
                     </div>
                 </div>	
             </div>
+
     
             <div class=\"navigation-contact\">
 
@@ -64,8 +66,7 @@
                 
             </div>
             <div class=\"navigation-rs\">" .
-                construct_menu_svg('rs') ."
-            </div>";
+                construct_menu_svg('rs');
             }
 
             function menu_footer() {

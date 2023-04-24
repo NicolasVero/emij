@@ -631,7 +631,7 @@ footer .menu-partenaires .menu-partenaires-svg {
 }
 .sliders #slider-image .image-slider::after {
   content: '';
-  background: linear-gradient(17deg, rgba(252, 188, 68, 0.5) 0%, rgba(137, 232, 255, 0.5) 100%);
+  background: linear-gradient(17deg, rgba(252, 188, 68, 0.8) 0%, rgba(137, 232, 255, 0.8) 100%);
   width: 100%;
   height: 100%;
   display: block;
@@ -720,6 +720,11 @@ footer .menu-partenaires .menu-partenaires-svg {
 }
 .navigation-container .navigation-menu dt {
   font-weight: 500;
+}
+.navigation-container .navigation-menu .close-navigation {
+  position: absolute;
+  right: 50px;
+  font-size: 25px;
 }
 .navigation-container .navigation-menu .navigation-logo {
   width: 25%;
@@ -927,6 +932,7 @@ footer .menu-partenaires .menu-partenaires-svg {
 .nous-trouver iframe {
   width: 100%;
   margin-top: -78px;
+  margin-bottom: -240px;
 }
 @media screen and (max-width: 1200px) {
   footer {
@@ -1059,5 +1065,12 @@ footer .menu-partenaires .menu-partenaires-svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  footer .menu-partenaires {
+    align-items: center;
+  }
+  footer .menu-partenaires .menu-partenaires-svg {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
