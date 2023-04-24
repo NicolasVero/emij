@@ -10,14 +10,17 @@
     <script src="<?= bloginfo('template_url'); ?>/assets/scripts/navigation.js" async></script>
     <title>Document</title>
 </head>
-<body>
+<body>     
     <header>
-        <? include "$directory/assets/svg/logo.svg"; ?>
-
         <div>
-            <p><i class="fas fa-phone-alt"></i> 00.00.00.00.00</p>
-            <p><i class="fas fa-envelope"></i> contact@emij.fr</p>
+            <? include "$directory/assets/svg/logo.svg"; ?>
+
+            <div class="header-contact">
+                <p><i class="fas fa-phone-alt"></i> 00.00.00.00.00</p>
+                <p><i class="fas fa-envelope"></i> contact@emij.fr</p>
+            </div>
         </div>
+        <div class="open-navigation"><span class="open-navigation-text">Menu </span><i class="fas fa-bars"></i></div>
 
 
     </header>

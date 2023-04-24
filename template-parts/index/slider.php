@@ -12,7 +12,6 @@
 
         ?>
         <li class="slider">
-            <div class="open-navigation"><span class="open-navigation-text">Menu </span><i class="fas fa-bars"></i></div>
             <div class="container slider-elements-container">
                     <div>
                         <h2><?= $titre[0] ?><span><?= isset($titre[1]) ? $titre[1] : ""?></span></h2>		

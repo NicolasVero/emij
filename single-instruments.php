@@ -1,11 +1,14 @@
 <?php
 
+include 'inc/head.php';
+
 get_header();
 
 while (have_posts()) : 
 	the_post();
 	
-include 'template-parts/instruments/slider.php';
+    include 'template-parts/instruments/slider.php';
+    include 'template-parts/navigation/navigation.php';
 
 ?>
 	<div class="post">

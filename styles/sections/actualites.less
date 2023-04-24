@@ -101,17 +101,31 @@
         }
 
 
-        .actualite_4 + h2 {
-            color: @white;
-            grid-area: 3 / 3 / 4 / 5;
-            font-size: 2.5rem;
-            font-weight: 600;
+        .actualite_4 + div {
 
-            span {
-                color: @dark_yellow;
-                display: block;
-                font-size: 4rem;
-                font-weight: @title-weight;
+            grid-area: 3 / 3 / 4 / 5;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+            h2 {
+
+                color: @white;
+                font-size: 2.5rem;
+                font-weight: 600;
+                
+                span {
+                    color: @dark_yellow;
+                    display: block;
+                    font-size: 4rem;
+                    font-weight: @title-weight;
+                }
+            }
+
+            p, i {
+                color: @white;
+                text-transform: uppercase;
+                font-size: 25px;
             }
         }
         

@@ -397,17 +397,28 @@ input[type="email"]::placeholder {
 .actualites-container .actualites-grid .actualite_4 div:first-of-type h2 {
   color: #FCBC44;
 }
-.actualites-container .actualites-grid .actualite_4 + h2 {
-  color: #FFFFFF;
+.actualites-container .actualites-grid .actualite_4 + div {
   grid-area: 3 / 3 / 4 / 5;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.actualites-container .actualites-grid .actualite_4 + div h2 {
+  color: #FFFFFF;
   font-size: 2.5rem;
   font-weight: 600;
 }
-.actualites-container .actualites-grid .actualite_4 + h2 span {
+.actualites-container .actualites-grid .actualite_4 + div h2 span {
   color: #FCBC44;
   display: block;
   font-size: 4rem;
   font-weight: 300;
+}
+.actualites-container .actualites-grid .actualite_4 + div p,
+.actualites-container .actualites-grid .actualite_4 + div i {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 25px;
 }
 .actualites-direct-container {
   background-color: #FCBC44;
@@ -500,6 +511,9 @@ input[type="email"]::placeholder {
 .contact-form-bis form label span {
   color: #651F59;
 }
+.pages-container {
+  margin-bottom: 75px;
+}
 .pages-container .a-propos {
   width: 50%;
   display: flex;
@@ -520,13 +534,15 @@ input[type="email"]::placeholder {
 header {
   z-index: 8;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 header svg {
   z-index: 6;
   position: relative;
   top: 35px;
 }
-header div {
+header .header-contact {
   z-index: 6;
   position: absolute;
   background-color: #FFFFFF;
@@ -536,7 +552,7 @@ header div {
   left: 270px;
   padding-left: 15px;
 }
-header div::after {
+header .header-contact::after {
   content: '';
   width: 100%;
   height: 40px;
@@ -547,15 +563,22 @@ header div::after {
   background-color: #FFFFFF;
   z-index: -1;
 }
-header div p {
+header .header-contact p {
   font-weight: bold;
   font-size: 25px;
 }
-header div p:first-of-type {
+header .header-contact p:first-of-type {
   margin-bottom: 0;
 }
-header div p i {
+header .header-contact p i {
   padding-right: 15px;
+}
+header .open-navigation {
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+  right: 50px;
 }
 footer {
   background-color: #651F59;
@@ -651,13 +674,6 @@ footer .menu-partenaires .menu-partenaires-svg {
   position: relative;
   z-index: 5;
 }
-.sliders .slider .open-navigation {
-  position: absolute;
-  right: 125px;
-  top: -150px;
-  font-size: 25px;
-  cursor: pointer;
-}
 .sliders .slider .subtitles {
   background-color: green;
 }
@@ -711,7 +727,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   background-color: #651F59;
   padding: 25px 0;
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;

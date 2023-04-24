@@ -27,8 +27,10 @@
         </article>
 
         <?php endwhile; wp_reset_query(); ?>
-        
+        <div>
         <h2>Les dates <span>à ne pas manquer<span></h2>
+        <p><i class="fas fa-arrow-right"></i> Voir plus de dates</p>
         </div>
+    </div>
 </div></div>
 </div>
