@@ -9,7 +9,7 @@
                 'ecole'          => ('Ecole'),
                 'rs'             => ('Réseaux sociaux'),
                 'partenaires'    => ('Partenaires'),
-                'pages-footer'    => ('Pages footer'),
+                'pages-footer'   => ('Pages footer'),
             )
         );
     }

@@ -1,4 +1,4 @@
-<div class="navigation-container">
+<div id="navigation-container">
 	<div class="navigation-menu">
 		<div class="navigation-logo">
 			<?php require "$directory/assets/svg/logo.svg"; ?>
