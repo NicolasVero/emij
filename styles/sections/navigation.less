@@ -2,9 +2,18 @@
 // out: false
 
 #navigation-container {
+    display: none;
+}
+
+#navigation-container.active {
 
     background-color: @dark_purple;
     padding: 25px 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 
     a {
         text-decoration: none;
@@ -35,6 +44,8 @@
             position: absolute;
             right: 50px;
             font-size: 25px;
+            cursor: pointer;
+            padding: 10px;
         }
 
         .navigation-logo {
