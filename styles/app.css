@@ -1112,6 +1112,9 @@ footer .menu-partenaires .menu-partenaires-svg {
     flex-direction: column;
     align-items: center;
   }
+  footer .menu-rs p {
+    text-align: center;
+  }
   footer .menu-partenaires {
     align-items: center;
   }

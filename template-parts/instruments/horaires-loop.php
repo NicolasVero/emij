@@ -21,21 +21,24 @@ while ($query->have_posts()) {
                     $presence_heure_d[] = get_sub_field('presence-heures-debut', $post_id);
                     $presence_heure_f[] = get_sub_field('presence-heures-fin', $post_id); 
                 }
-            }
 
-            $semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-            $cpt = 0;
+                $semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+                $cpt = 0;
 
-            for($i = 0; $i < count($semaine); $i++) {
-                if(in_array($semaine[$i], $presence_jours)) { ?>
-                    <div class='present'>
-                        <?= $semaine[$i]; ?>
-                        <span class="horaires"><?= $presence_heure_d[$cpt] . "h à " . $presence_heure_f[$cpt] . "h"; $cpt++; ?></span>
-                    </div>
-                <?php } else { ?>
-                    <div><?= $semaine[$i]; ?></div>
-                <?php }
-            }
+                for($i = 0; $i < count($semaine); $i++) {
+                    if(in_array($semaine[$i], $presence_jours)) { ?>
+                        <div class='present'>
+                            <?= $semaine[$i]; ?>
+                            <span class="horaires"><?= $presence_heure_d[$cpt] . "h à " . $presence_heure_f[$cpt] . "h"; $cpt++; ?></span>
+                        </div>
+                    <?php } else { ?>
+                        <div><?= $semaine[$i]; ?></div>
+                    <?php }
+                }
+            } else 
+                echo "<p>Aucun cours de programmé actuellement<p>";
+            
+
         // wp_reset_postdata();
     }
 
