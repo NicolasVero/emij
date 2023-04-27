@@ -1024,6 +1024,8 @@ footer .menu-partenaires .menu-partenaires-svg {
   .sliders .slider .slider-elements-container div {
     margin-top: 0;
     padding-left: 0;
+    top: 198px;
+    position: relative;
   }
   .sliders .slider .slider-elements-container div h2 {
     font-size: 3.5rem;
@@ -1034,6 +1036,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   }
   .ateliers-container {
     height: 1680px;
+    margin-top: 220px;
   }
   .ateliers-container::before {
     height: 1880px;

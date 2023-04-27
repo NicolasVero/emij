@@ -2,12 +2,6 @@
 
 @media screen and (max-width: 768px) {
     
-    
-    
-    body {
-        // background-color: green;
-    }  
-    
     header {
         svg {
             position: static;
@@ -48,6 +42,8 @@
                 div {
                     margin-top: 0;
                     padding-left: 0;
+                    top: 198px;
+                    position: relative;
 
                     h2 {
                         font-size: 3.5rem;
@@ -66,6 +62,7 @@
 
     .ateliers-container {
         height: 1680px;
+        margin-top: 220px;
 
         &::before { height: 1880px; }
 
@@ -115,6 +112,7 @@
 
         padding: 0;
         margin: 150px 0 800px 0;
+
         .actualites-grid {
             grid-template-columns: repeat(2, 43vw);
             // grid-template-rows: repeat(5, 1fr);
@@ -124,12 +122,8 @@
 
             .actualite {
                 max-width: 100%;
-                img {
-                    // height: auto !important;
-                }
 
-                .actualite-infos {
-                    
+                .actualite-infos {         
                     width: 100%;
                     
                     .actualite-date {
