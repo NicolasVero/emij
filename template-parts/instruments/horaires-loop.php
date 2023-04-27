@@ -37,8 +37,7 @@ while ($query->have_posts()) {
                 }
             } else 
                 echo "<p>Aucun cours de programmé actuellement<p>";
-            
-
+        
         // wp_reset_postdata();
     }
 
