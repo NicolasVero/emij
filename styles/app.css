@@ -206,20 +206,20 @@ input[type="email"]::placeholder {
   flex-direction: column-reverse;
 }
 .ateliers-container .atelier:nth-child(odd) .atelier-image {
-  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
 }
 .ateliers-container .atelier:nth-child(odd) .atelier-image img {
-  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
   position: relative;
 }
 .ateliers-container .atelier:nth-child(odd) .atelier-image::after {
   background: linear-gradient(17deg, rgba(252, 188, 68, 0.5) 0%, rgba(137, 232, 255, 0.5) 100%);
 }
 .ateliers-container .atelier:nth-child(even) .atelier-image {
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
 }
 .ateliers-container .atelier:nth-child(even) .atelier-image img {
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
 }
 .ateliers-container .atelier:nth-child(even) .atelier-image::after {
   background: linear-gradient(17deg, rgba(255, 105, 113, 0.5) 0%, rgba(195, 114, 255, 0.5) 100%);
@@ -600,6 +600,20 @@ header .header-contact p:last-of-type {
 header .header-contact p i {
   padding-right: 15px;
 }
+header .header-fixed-elements-background {
+  height: 245px;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: -70px;
+  z-index: -2;
+  transform: skewY(356deg);
+  opacity: 0;
+  transition: 0.3s;
+}
+header .header-fixed-elements-background.active {
+  opacity: 1;
+}
 header .logo,
 header .header-contact {
   position: fixed;
@@ -651,7 +665,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   padding: 0;
   z-index: 6;
   position: relative;
-  top: 200px;
+  top: 194px;
   margin-bottom: 165px;
 }
 .sliders #slider-instruments::before {
@@ -674,7 +688,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   height: 264px;
 }
 .sliders #slider-image .image-slider {
-  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
   position: relative;
   top: -62px;
   z-index: -2;
@@ -683,7 +697,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   width: 100%;
   object-fit: cover;
   height: 500px;
-  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
 }
 .sliders #slider-image .image-slider::after {
   content: '';

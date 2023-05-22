@@ -53,6 +53,24 @@ header {
         }
     }
 
+    .header-fixed-elements-background {
+        height: 245px;
+        width: 100vw;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: fixed;
+        top: -70px;
+        z-index: -2;
+        .skew();
+        opacity: 0;
+        transition: .3s;
+    }
+
+    .header-fixed-elements-background.active {
+        opacity: 1;
+        // transition: .3s;
+    }
+
+
     .logo, .header-contact {
         position: fixed;
     }
@@ -60,7 +78,6 @@ header {
     .open-navigation {
         font-size: 25px;
         cursor: pointer;
-        // position: relative;
         top: 50px;
         right: 50px;
         position: fixed;

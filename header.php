@@ -8,11 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= bloginfo('template_url'); ?>/styles/app.css" type="text/css">
     <script src="<?= bloginfo('template_url'); ?>/assets/scripts/navigation.js" async></script>
+    <script src="<?= bloginfo('template_url'); ?>/assets/scripts/header-background.js" async></script>
     <title>Document</title>
 </head>
 <body>     
     <header>
-        <div>
+        <div class="header-elements">
             <div class="logo">
                 <p>école de musique</p>
                 <p>Depuis 1991</p>
@@ -24,6 +25,7 @@
             </div>
         </div>
         <div class="open-navigation"><span class="open-navigation-text">Menu </span><i class="fas fa-bars"></i></div>
+        <div class="header-fixed-elements-background"></div>
 
 
     </header>
