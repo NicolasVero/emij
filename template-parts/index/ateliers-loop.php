@@ -14,8 +14,8 @@
            
         <div class="col-md-3 atelier"> 
             <div class="atelier-infos">
-                <h2><?php the_title(); ?></h2>			
-                <?php the_excerpt(); ?>
+                <h1><?php the_title(); //100px ?></h1>			
+                <h2><?php the_excerpt(); //35px ?></h2>
                 <a class="primary-button" href=<?php the_permalink(); ?>>En savoir plus</a>
             </div>
             <figure class="atelier-image"><?php the_post_thumbnail(); ?></figure>
