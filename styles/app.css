@@ -670,7 +670,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   position: relative;
   left: 0;
 }
-.sliders #slider-image .slider-elements-container div h2 span {
+.sliders #slider-image .slider-elements-container div h1 span {
   font-weight: 300;
 }
 .sliders .slider {
@@ -702,14 +702,15 @@ footer .menu-partenaires .menu-partenaires-svg {
   margin-top: -95px;
   padding-left: 171px;
 }
-.sliders .slider .slider-elements-container div h2 {
+.sliders .slider .slider-elements-container div h1 {
   font-size: 100px;
   transform: skewY(356deg);
   letter-spacing: -2px;
   line-height: 100px;
   font-weight: 300;
+  text-transform: uppercase;
 }
-.sliders .slider .slider-elements-container div h2 span {
+.sliders .slider .slider-elements-container div h1 span {
   display: block;
   font-weight: initial;
   font-weight: 500;

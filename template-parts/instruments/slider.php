@@ -23,11 +23,11 @@
                     if($post->post_type != "instruments") $style = "font-weight: 300;";
                     
                     ?>
-                    <h2><?= $titre[0]; ?><span style="display: inline;"><? if(isset($titre[1])) echo " " . $titre[1]; ?></span></h2>
+                    <h1><?= $titre[0]; ?><span style="display: inline;"><? if(isset($titre[1])) echo " " . $titre[1]; ?></span></h1>
                     <?php if($post->post_type == "actualites") { ?>
-                    <span class="slider-subtitles"><?= formateDate($date); ?></span>
+                        <h2 class="slider-subtitles"><?= formateDate($date); ?></h2>
                     <?php } else { ?> 
-                    <span class="slider-subtitles"><?= the_excerpt(); ?></span>
+                        <h2 class="slider-subtitles"><?= get_the_excerpt(); ?></span>
                     <?php } ?>
 
                 </div>
