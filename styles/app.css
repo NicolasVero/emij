@@ -564,11 +564,14 @@ header .header-contact::after {
   z-index: -1;
 }
 header .header-contact p {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 25px;
 }
 header .header-contact p:first-of-type {
   margin-bottom: 0;
+}
+header .header-contact p:last-of-type {
+  letter-spacing: 1px;
 }
 header .header-contact p i {
   padding-right: 15px;
