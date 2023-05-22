@@ -31,6 +31,6 @@
     <?php 
     $affiche = false; 
 
-                        endif; 
-                        endwhile; wp_reset_query(); ?>
+    endif; 
+    endwhile; wp_reset_query(); ?>
 </ul>

@@ -1,7 +1,7 @@
 <div id="navigation-container">
 	<div class="navigation-menu">
 		<div class="navigation-logo">
-			<?php require "$directory/assets/svg/logo.svg"; ?>
+			<?php require "$directory/assets/svg/full_logo.svg"; ?>
 			<h2>École de jazz et musiques actuelles</h2>
 		</div>
 		

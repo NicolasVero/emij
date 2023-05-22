@@ -1,0 +1,35 @@
+// out: false 
+
+.logo {
+    background-color: @dark_purple;
+    position: relative;
+    top: 50px;
+    height: 180px;
+    width: 300px;
+    .skew();
+
+    svg {
+        position: absolute;
+        top: -30px;
+    }
+
+    p {
+        position: absolute;
+        background-color: @orange;
+        color: @white;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 3px 10px;
+        font-weight: 300;
+
+        &:first-of-type {
+            left: 60px;
+            bottom: 18px;
+        }
+
+        &:last-of-type {
+            left: 188px;
+            bottom: -16px;
+        }
+    }
+}

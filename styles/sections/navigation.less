@@ -2,15 +2,10 @@
 // out: false
 
 #navigation-container {
-    display: none;
-}
-
-#navigation-container.active {
-
-    background-color: @dark_purple;
-    padding: 25px 0;
-    display: block;
+    // display: none;
     position: fixed;
+    right: -100%;
+    transition: transform 0.3s ease-in-out;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -18,6 +13,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: @dark_purple;
+    padding: 25px 0;
+    
+    * {
+        opacity: 0;
+    }
+}
+
+#navigation-container.active {
+
+
+    //display: block;
+    // position: fixed;
+    transform: translateX(-100%);
+
+    * {
+        opacity: 1;
+    }
 
     a {
         text-decoration: none;

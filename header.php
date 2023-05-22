@@ -13,8 +13,11 @@
 <body>     
     <header>
         <div>
-            <? include "$directory/assets/svg/logo.svg"; ?>
-
+            <div class="logo">
+                <p>école de musique</p>
+                <p>Depuis 1991</p>
+                <? require "$directory/assets/svg/logo.svg"; ?>
+            </div>
             <div class="header-contact">
                 <p><i class="fas fa-phone-alt"></i> 00 00 00 00 00</p>
                 <p><i class="fas fa-envelope"></i> contact@emij.fr</p>
