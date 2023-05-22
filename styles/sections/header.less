@@ -7,11 +7,11 @@ header {
     display: flex;
     justify-content: space-between;
 
-    svg {
-        z-index: 6;
-        position: relative;
-        top: 35px;
-    }
+    // svg {
+    //     z-index: 6;
+    //     position: relative;
+    //     top: 35px;
+    // }
     
     .header-contact {
         z-index: 6;
@@ -53,11 +53,16 @@ header {
         }
     }
 
+    .logo, .header-contact {
+        position: fixed;
+    }
+
     .open-navigation {
         font-size: 25px;
         cursor: pointer;
-        position: relative;
+        // position: relative;
         top: 50px;
         right: 50px;
+        position: fixed;
     }
 }

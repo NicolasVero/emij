@@ -566,11 +566,6 @@ header {
   display: flex;
   justify-content: space-between;
 }
-header svg {
-  z-index: 6;
-  position: relative;
-  top: 35px;
-}
 header .header-contact {
   z-index: 6;
   position: absolute;
@@ -605,12 +600,16 @@ header .header-contact p:last-of-type {
 header .header-contact p i {
   padding-right: 15px;
 }
+header .logo,
+header .header-contact {
+  position: fixed;
+}
 header .open-navigation {
   font-size: 25px;
   cursor: pointer;
-  position: relative;
   top: 50px;
   right: 50px;
+  position: fixed;
 }
 footer {
   background-color: #651F59;
@@ -652,6 +651,8 @@ footer .menu-partenaires .menu-partenaires-svg {
   padding: 0;
   z-index: 6;
   position: relative;
+  top: 200px;
+  margin-bottom: 165px;
 }
 .sliders #slider-instruments::before {
   height: 658px;
