@@ -3,9 +3,9 @@ const bouton_close = document.getElementsByClassName('close-navigation')[0];
 const navigation = document.getElementById('navigation-container');
 
 bouton_open.addEventListener('click', function() {
-    navigation.classList.add('active');
+    navigation.classList.add('open');
 });
 
 bouton_close.addEventListener('click', function() {
-    navigation.classList.remove('active');
+    navigation.classList.remove('open');
 });
