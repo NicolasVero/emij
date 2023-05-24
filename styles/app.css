@@ -609,12 +609,11 @@ header .header-fixed-elements-background {
   z-index: -2;
   transform: skewY(356deg);
   opacity: 0;
-  display: none;
   transition: 0.3s;
 }
 header .header-fixed-elements-background.active {
   opacity: 1;
-  display: block;
+  transition: 0.3s;
 }
 header .logo,
 header .header-contact {
@@ -1029,6 +1028,10 @@ footer .menu-partenaires .menu-partenaires-svg {
   margin-top: -78px;
   margin-bottom: -240px;
 }
+.formulaire-contact {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
 .formulaire-contact > p,
 .formulaire-contact > h2 {
   text-align: center;
@@ -1057,6 +1060,9 @@ footer .menu-partenaires .menu-partenaires-svg {
 .formulaire-contact form .wpcf7-response-output {
   width: 100%;
   padding: 10px;
+}
+.formulaire-contact form p:last-of-type {
+  margin: 0 auto 1rem auto;
 }
 .formulaire-contact form.invalid .wpcf7-response-output {
   background-color: #ff00007a;

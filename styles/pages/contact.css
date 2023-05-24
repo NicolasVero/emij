@@ -1,3 +1,7 @@
+.formulaire-contact {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
 .formulaire-contact > p,
 .formulaire-contact > h2 {
   text-align: center;
@@ -26,6 +30,9 @@
 .formulaire-contact form .wpcf7-response-output {
   width: 100%;
   padding: 10px;
+}
+.formulaire-contact form p:last-of-type {
+  margin: 0 auto 1rem auto;
 }
 .formulaire-contact form.invalid .wpcf7-response-output {
   background-color: #ff00007a;
