@@ -1066,6 +1066,9 @@ footer .menu-partenaires .menu-partenaires-svg {
 .formulaire-contact form p:last-of-type {
   margin: 0 auto 1rem auto;
 }
+.formulaire-contact form .wpcf7-not-valid-tip {
+  color: red;
+}
 .formulaire-contact form.invalid .wpcf7-response-output {
   background-color: #ff00007a;
 }
