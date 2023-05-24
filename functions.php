@@ -19,6 +19,6 @@
     require_once 'inc/thumbnails.php';
     require_once 'inc/utilitaire.php';
     require_once 'inc/formater-date.php';
-    require_once 'inc/jquery.php';
+    // require_once 'inc/jquery.php';
     
 ?>
