@@ -15,7 +15,7 @@
         <article class="<?= "actualite actualite_$i"; ?>"> 
             <!-- <a style="display: block;"> -->
             <div class= <?= "actualite-infos actualite-infos_$i"; ?>>
-                <aside><p class="actualite-date">Le <?= get_the_date('j/m/Y'); ?></p></aside>
+                <aside><p class="actualite-date">Le <?= date_i18n('d.m.Y', strtotime(get_the_date('j/m/Y'))); ?></p></aside>
                 <h2><?php the_title(); ?></h2>			
                 <?php the_excerpt(); ?>
                 <a href=<?php the_permalink(); ?>>En savoir plus</a>

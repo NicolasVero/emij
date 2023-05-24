@@ -4,8 +4,6 @@ include 'inc/head.php';
 
 get_header();
 
-echo $directory;
-
 while (have_posts()) : 
 	the_post();
 

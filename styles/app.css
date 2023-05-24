@@ -126,7 +126,7 @@ input[type="email"]::placeholder {
 }
 .checkbox:checked + span::after {
   opacity: 1;
-  transform: scale(1) rotate(0);
+  transform: translateY(19px);
 }
 .checkbox {
   -webkit-appearance: none;
@@ -172,7 +172,7 @@ input[type="email"]::placeholder {
 }
 .logo p:first-of-type {
   left: 60px;
-  bottom: 18px;
+  bottom: 20px;
 }
 .logo p:last-of-type {
   right: 0;
@@ -1056,6 +1056,8 @@ footer .menu-partenaires .menu-partenaires-svg {
 }
 .formulaire-contact form textarea {
   width: 650px;
+  height: 250px;
+  padding: 12px;
 }
 .formulaire-contact form .wpcf7-response-output {
   width: 100%;
