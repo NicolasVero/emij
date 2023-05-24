@@ -4,7 +4,6 @@
     include 'inc/head.php';
     get_header();
 
-    include 'template-parts/navigation/navigation.php';
     include 'template-parts/index/slider.php';
     include 'template-parts/index/ateliers-loop.php';
     include 'template-parts/index/instruments-loop.php';

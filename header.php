@@ -27,6 +27,7 @@
         <div class="open-navigation"><span class="open-navigation-text">Menu </span><i class="fas fa-bars"></i></div>
         <div class="header-fixed-elements-background"></div>
 
-
     </header>
+
+    <? include 'template-parts/navigation/navigation.php'; ?>
     <main>

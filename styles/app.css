@@ -609,10 +609,12 @@ header .header-fixed-elements-background {
   z-index: -2;
   transform: skewY(356deg);
   opacity: 0;
+  display: none;
   transition: 0.3s;
 }
 header .header-fixed-elements-background.active {
   opacity: 1;
+  display: block;
 }
 header .logo,
 header .header-contact {
@@ -1026,6 +1028,47 @@ footer .menu-partenaires .menu-partenaires-svg {
   width: 100%;
   margin-top: -78px;
   margin-bottom: -240px;
+}
+.formulaire-contact > p,
+.formulaire-contact > h2 {
+  text-align: center;
+}
+.formulaire-contact .screen-reader-response {
+  display: none;
+}
+.formulaire-contact form {
+  margin: 0 auto;
+  width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.formulaire-contact form p > label > span {
+  display: flex;
+  flex-direction: column;
+}
+.formulaire-contact form input,
+.formulaire-contact form textarea {
+  border: 1px solid black;
+}
+.formulaire-contact form textarea {
+  width: 650px;
+}
+.formulaire-contact form .wpcf7-response-output {
+  width: 100%;
+  padding: 10px;
+}
+.formulaire-contact form.invalid .wpcf7-response-output {
+  background-color: #ff00007a;
+}
+.formulaire-contact form.invalid .wpcf7-response-output::before {
+  content: 'x ';
+}
+.formulaire-contact form.sent .wpcf7-response-output {
+  background-color: #25e4417a;
+}
+.formulaire-contact form.sent .wpcf7-response-output::before {
+  content: 'v ';
 }
 @media screen and (max-width: 1200px) {
   .slider .open-navigation {

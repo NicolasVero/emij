@@ -1,10 +1,20 @@
-<!-- <div class="contact-form col-12">
+<?php get_header() ?>
 
-    <h2>RESTEZ INFORMÉ</h2>
-    <p>lorem ipsum dolor eres</p>
+<style>
 
-    
-    <? //do_shortcode('[contact-form-7 id="268" title="Formulaire de contact"]'); ?>
-</div> -->
 
-<p>bonjour</p>
+
+</style>
+
+
+
+
+    <div class="formulaire-contact">
+        <h2>Formulaire de contact</h2>
+        <p>lorem ipsum dolor eres</p>
+        
+        <?= do_shortcode('[contact-form-7 id="268" title="Formulaire de contact"]'); ?>
+    </div>
+
+
+<?php get_footer() ?>

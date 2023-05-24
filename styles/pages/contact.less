@@ -1,0 +1,57 @@
+.formulaire-contact {
+
+    & > p, & > h2 {
+        text-align: center;
+    }
+
+    .screen-reader-response {
+        display: none;
+    }
+
+    form  {
+        
+        margin: 0 auto;
+        width: 650px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        p > label > span {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            border: 1px solid black;
+        }
+
+        textarea {
+            width: 650px;
+        }
+
+        .wpcf7-response-output {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    form.invalid {
+        .wpcf7-response-output {
+            background-color: #ff00007a;
+
+            &::before {
+                content: 'x ';
+            }
+        }
+    }
+
+    form.sent {
+        .wpcf7-response-output {
+            background-color: #25e4417a;
+
+            &::before {
+                content: 'v ';
+            }
+        }
+    }
+}
