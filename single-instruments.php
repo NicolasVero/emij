@@ -13,6 +13,8 @@ while (have_posts()) :
 ?>
 	<div class="post">
         <div class="instruments">
+            <?php the_title(); ?>
+            <?php the_excerpt(); ?>
             <?php the_content(); ?> 
         </div>
 
