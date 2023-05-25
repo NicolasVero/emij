@@ -8,7 +8,7 @@ while (have_posts()) :
 	the_post();
 
 include 'template-parts/navigation/navigation.php';	
-include 'template-parts/instruments/slider.php';
+include 'template-parts/heros.php';
 
 ?>
 	<div class="post">

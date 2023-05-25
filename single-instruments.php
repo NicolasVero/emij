@@ -7,14 +7,12 @@ get_header();
 while (have_posts()) : 
 	the_post();
 	
-    include 'template-parts/instruments/slider.php';
+    include 'template-parts/hero.php';
     include 'template-parts/navigation/navigation.php';
 
 ?>
 	<div class="post">
         <div class="instruments">
-            <?php the_title(); ?>
-            <?php the_excerpt(); ?>
             <?php the_content(); ?> 
         </div>
 
