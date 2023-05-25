@@ -1,14 +1,18 @@
 $(document).ready(function() {
-    const slideWidth = $('.sliders li').outerWidth(); 
     const slideCount = $('.sliders li').length; 
     const animationDuration = 500; 
     
+    var slideWidth = $('.sliders li').outerWidth(); 
     var slideIndex = 0; 
 
     function updateSliderPosition() {
         var leftPosition = -slideIndex * slideWidth;
         $('.sliders').animate({ 'left': leftPosition }, animationDuration);
     }
+
+    $(window).on('resize', function() {
+        slideWidth = $('.sliders li').outerWidth();
+    });
 
     $('.prev-button').click(function() {
         
