@@ -2,18 +2,25 @@
         
         // $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => -1, 'post_parent' => 0) ); 
         $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => 3, 'post_parent' => 0) ); 
+        // $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => 1, 'post_parent' => 0) ); 
 
-            ?><ul class="sliders"><?php
+            ?>
+            <div class="sliders-background degrade-1"></div>
+            <ul class="sliders"><?php
+
+        $i = 0;
+        
         // $affiche = true;
         while ($query->have_posts()) :
             $query->the_post();
+            $i++;
 
             // if($affiche) :
         
         $titre = explode(" ", get_the_title());
 
         ?>
-        <li class="slider">
+        <li class="slider slider_<?= $i ?>">
             <div class="container slider-elements-container">
                     <div>
                         <h1><?= $titre[0] ?><span><?= isset($titre[1]) ? $titre[1] : ""?></span></h1>		
