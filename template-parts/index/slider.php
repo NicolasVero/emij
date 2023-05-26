@@ -1,6 +1,7 @@
 <?php
         
-        $query = new WP_Query( array( 'post_type' => 'ateliers', 'post_per_page' => -1, 'post_parent' => 0) ); 
+        // $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => -1, 'post_parent' => 0) ); 
+        $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => 3, 'post_parent' => 0) ); 
 
             ?><ul class="sliders"><?php
         // $affiche = true;
