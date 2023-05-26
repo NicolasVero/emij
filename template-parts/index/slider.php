@@ -24,7 +24,7 @@
         <li class="slider slider_<?= $i ?>">
             <div class="container slider-elements-container">
                     <div>
-                        <h1><?= $titre[0] ?><span><?= isset($titre[1]) ? $titre[1] : ""?></span></h1>		
+                        <h2><?= $titre[0] ?><span><?= isset($titre[1]) ? $titre[1] : ""?></span></h2>		
                         <a class="primary-button" href=<?php the_permalink(); ?>>En savoir plus</a>
                     </div>
                     <figure>

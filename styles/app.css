@@ -709,7 +709,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   position: relative;
   left: 0;
 }
-.slider-elements-container div h1 span {
+.slider-elements-container div h2 span {
   font-weight: 300;
 }
 .slider {
@@ -730,7 +730,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   margin-top: -95px;
   padding-left: 171px;
 }
-.slider .slider-elements-container div h1 {
+.slider .slider-elements-container div h2 {
   font-size: 100px;
   transform: skewY(356deg);
   letter-spacing: -2px;
@@ -738,7 +738,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   font-weight: 300;
   text-transform: uppercase;
 }
-.slider .slider-elements-container div h1 span {
+.slider .slider-elements-container div h2 span {
   display: block;
   font-weight: initial;
   font-weight: 500;
