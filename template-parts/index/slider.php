@@ -5,6 +5,7 @@
         // $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => 1, 'post_parent' => 0) ); 
 
             ?>
+            <div class="sliders-background-default"></div>
             <div class="sliders-background degrade-1"></div>
             <ul class="sliders"><?php
 
