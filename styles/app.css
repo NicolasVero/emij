@@ -1805,7 +1805,6 @@ footer .menu-partenaires .menu-partenaires-svg {
 }
 .slider-elements-container div {
   margin-top: -616px;
-  margin-bottom: 350px;
   position: relative;
   left: 0;
 }
@@ -1853,17 +1852,19 @@ footer .menu-partenaires .menu-partenaires-svg {
   width: 380px;
 }
 .slider-buttons {
+  margin-top: 240px;
   width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
   bottom: 75px;
-  font-size: 25px;
+  font-size: 30px;
 }
 .slider-buttons .slider-button {
   z-index: 6;
   position: relative;
   background-color: inherit;
+  padding: 0 15px;
 }
 .hero {
   position: relative;
