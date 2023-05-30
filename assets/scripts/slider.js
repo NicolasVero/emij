@@ -2,24 +2,37 @@ slider_slide();
 
 function slider_slide() {
 
-    
     $(document).ready(function() {
 
         // CONSTANTES 
         const slideCount = $('.sliders li').length; 
         const animationContentDuration = 800; 
         const animationImageDuration = 600; 
-        const animationBackgroundDuration = 600; 
+        const animationFadeInDuration = 600; 
+        const animationFadeOutDuration = 200; 
         const sliderMargin = 4;
-         
+        const degrades = [
+            "degrade-1",
+            "degrade-2",
+            "degrade-3"
+        ];
+        
         // VARIABLES 
         var slideWidth = $('.sliders li').outerWidth(); 
         var slideIndex = 0; 
         var is_blocked = false;
         var visibilityChangePaused = false;
+        var buttons_disabled = false;
         
 
         // FONCTIONS
+
+        function update_slider() {
+            update_slider_position();
+            change_color();
+            slider_blocked();
+        }
+
         function update_slider_position() {
             var leftPosition = -slideIndex * slideWidth - sliderMargin * slideIndex;
             $('.sliders .container > div').animate({ 'left': leftPosition }, animationContentDuration);
@@ -30,25 +43,31 @@ function slider_slide() {
             slideIndex++;
             if (slideIndex >= slideCount) 
                 slideIndex = 0;
+
+            disabled_buttons();
         }
 
         function decremente_slider() {
             slideIndex--;
             if (slideIndex < 0) 
                 slideIndex = slideCount - 1;
+
+            disabled_buttons();
+        }
+
+        function disabled_buttons() {
+            buttons_disabled = true;
+
+            setTimeout( function() {
+                buttons_disabled = false;
+            }, animationContentDuration);
         }
 
         function change_color() {
 
-            const degrades = [
-                "degrade-1",
-                "degrade-2",
-                "degrade-3"
-            ];
-
-            $('.sliders-background').fadeOut(animationBackgroundDuration, function() {
+            $('.sliders-background').fadeOut(animationFadeOutDuration, function() {
                 $(this).removeClass().addClass('sliders-background ' + degrades[slideIndex % degrades.length]);
-                $(this).fadeIn(animationBackgroundDuration);
+                $(this).fadeIn(animationFadeInDuration);
             });
         }
 
@@ -73,9 +92,7 @@ function slider_slide() {
                 update_slider_position(); 
                 visibilityChangePaused = false;
             }
-        }
-
-        
+        }    
 
         // ECOUTEURS D'EVENEMENTS
         document.addEventListener("visibilitychange", function() {
@@ -94,19 +111,19 @@ function slider_slide() {
 
         $('.prev-button').click(function() {
             
-            decremente_slider();
-            update_slider_position();
-            change_color();
-            slider_blocked();
+            if(!buttons_disabled) {
+                decremente_slider();
+                update_slider();
+            }
         });
     
         
         $('.next-button').click(function() {
             
-            incremente_slider();
-            update_slider_position();
-            change_color();
-            slider_blocked();
+            if(!buttons_disabled) {
+                incremente_slider();
+                update_slider();
+            }
         });
 
 
