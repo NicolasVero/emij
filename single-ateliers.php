@@ -13,6 +13,9 @@ include 'template-parts/hero.php';
 ?>
 	<div class="post">
         <div class="ateliers">
+
+            <?php the_breadcrumb(); ?>
+
             <?php the_content(); ?> 
         </div>
 
