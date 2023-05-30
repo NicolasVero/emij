@@ -1,43 +1,12 @@
-// out: false
-
 //IMPORT FONT
-@import url("https://use.typekit.net/nrt2gml.css");
+//@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+//FONT SLASH BADASS
 
-//ICOMOON
 @font-face {
-  font-family: 'volant-seminaire-icon';
-  src:  url('../fonts/volant-seminaire-icon.eot?ekmktu');
-  src:  url('../fonts/volant-seminaire-icon.eot?ekmktu#iefix') format('embedded-opentype'),
-	url('../fonts/volant-seminaire-icon.ttf?ekmktu') format('truetype'),
-	url('../fonts/volant-seminaire-icon.woff?ekmktu') format('woff'),
-	url('../fonts/volant-seminaire-icon.svg?ekmktu#volant-seminaire-icon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+	font-family: 'Slash';
+	src:url('../fonts/Slash.ttf') format('OpenType');
 }
-
-[class^="icon-"],
-[class*="icon-"],
-.icon-{
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'volant-seminaire-icon' !important;
-  speak: never;
-  font-style: normal;
-  .fontSize(22);
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@import url('icons.less');
 
 // THEMIFY
 @font-face {
@@ -76,8 +45,9 @@
 @Italic: italic;
 @FontAwesome: 'FontAwesome';
 @Mify: 'themify';
-@Icon: 'icomoon';
-@FontFirst: "acumin-pro", sans-serif;;
+@Font-1: 'Source Sans Pro', sans-serif;
+@Font-2: 'Slash';
+@Font-3: 'Source code Pro', sans-serif;
 @BaseSize: 16;
 //FONTAWESOME & MIFY
 .FontAwesome(){
@@ -86,37 +56,42 @@
 .Mify(){
 	font-family: @Mify;
 }
-.Icon(){
-	font-family: @Icon;
+//FONT
+.fSlash(){
+	font-family: @Font-2;
+	text-transform: uppercase;
 }
-//FONT PROJET
-.FR(){
-	font-family: @FontFirst;
+
+.fcodeL(){
+	font-family: @Font-3;
+	font-weight: @Light;
+}
+.fcodeR(){
+	font-family: @Font-3;
 	font-weight: @Regular;
 }
-.FB(){
-	font-family: @FontFirst;
+.fcodeB(){
+	font-family: @Font-3;
 	font-weight: @Bold;
 }
-.FXB(){
-	font-family: @FontFirst;
-	font-weight: @XBold;
+.fL(){
+	font-family: @Font-1;
+	font-weight: @Light;
+}
+.fR(){
+	font-family: @Font-1;
+	font-weight: @Regular;
+}
+.fB(){
+	font-family: @Font-1;
+	font-weight: @Bold;
 }
 .FontGeneric(){
-	.FR();
-	.fontSize(14);
-	.lineHeight(20);
+	.fR();
+	.fontSize(16);
 }
 html{
 	font-size: 62.5%;
-}
-body {
-	background-color: @White ;
-	overflow-x: hidden;
-	.FontGeneric();
-	color: @Black;
-	position: relative;
-	text-align: left;
 }
 //SIZE FONT
 .fontSize(@size) {
