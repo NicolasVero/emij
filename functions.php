@@ -13,12 +13,12 @@
     }
     add_filter('upload_mimes', 'wpc_mime_types');
 
+    require_once 'inc/breadcrumb.php';
     require_once 'inc/custompost.php';
     require_once 'inc/formating-content.php';
     require_once 'inc/menus.php';
     require_once 'inc/thumbnails.php';
     require_once 'inc/utilitaire.php';
     require_once 'inc/formater-date.php';
-    // require_once 'inc/jquery.php';
     
 ?>

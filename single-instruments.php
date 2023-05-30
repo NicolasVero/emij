@@ -13,6 +13,9 @@ while (have_posts()) :
 ?>
 	<div class="post">
         <div class="instruments">
+
+            <?php the_breadcrumb(); ?>
+
             <?php the_content(); ?> 
         </div>
 
