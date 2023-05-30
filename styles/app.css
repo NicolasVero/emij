@@ -523,17 +523,28 @@ input[type="email"]::placeholder {
 .contact-form h2 {
   color: #FFFFFF;
 }
+.contact-form form input[type=text],
+.contact-form form input[type="email"] {
+  color: #FFFFFF;
+}
 .contact-form form label span {
   color: #FFFFFF;
 }
 .contact-form-bis h2 {
   color: #C372FF;
 }
+.contact-form-bis form input[type=text],
+.contact-form-bis form input[type="email"] {
+  color: #D9BFFF;
+}
 .contact-form-bis form input {
   border-color: #C372FF;
 }
 .contact-form-bis form input::placeholder {
   color: #C372FF;
+}
+.contact-form-bis form input:focus {
+  color: #651F59;
 }
 .contact-form-bis form input[type="checkbox"] {
   border-color: #651F59;
@@ -763,6 +774,7 @@ footer .menu-partenaires .menu-partenaires-svg {
 .slider-buttons .slider-button {
   z-index: 6;
   position: relative;
+  background-color: inherit;
 }
 .hero {
   position: relative;
@@ -863,7 +875,7 @@ footer .menu-partenaires .menu-partenaires-svg {
   top: 0;
 }
 #hero-image .hero-elements-container div {
-  margin-top: -616px;
+  margin-top: -660px;
   margin-bottom: 350px;
   position: relative;
   left: 0;

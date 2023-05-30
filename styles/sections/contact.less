@@ -59,6 +59,11 @@
     }
 
     form {
+     
+        input[type=text], input[type="email"] {
+            color: @white;
+        }
+     
         label {
             span {
                 color: @white;
@@ -76,11 +81,20 @@
     }
 
     form {
+
+        input[type=text], input[type="email"] {
+            color: @light_purple;
+        }
+
         input { 
             border-color: @purple_bis;
         
             &::placeholder {
                 color: @purple_bis;
+            }
+
+            &:focus {
+                color: @dark_purple;
             }
         }
 
