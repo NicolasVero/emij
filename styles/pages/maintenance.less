@@ -1,0 +1,66 @@
+//out: false
+
+body.page-id-281 {
+
+    .open-navigation, 
+    .header-contact,
+    .header-fixed-elements-background {
+        display: none;
+    }
+
+    .logo {
+        top: 12px;
+    }
+
+    main {
+        background-color: @landing-bg;
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 300;
+            line-height: 1;
+            padding-top: 60px;
+            .skew();
+            
+            strong {
+                font-weight: 500;
+            }
+            
+            span {
+                display: block;
+                font-size: 90px;
+            }
+            
+            span:first-of-type {
+                font-size: 70px;
+            }
+            
+            span:last-of-type {
+                transform: translateX(150px);
+            }
+        }
+
+        .wp-block-columns {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        figure {
+            margin-top: -245px;
+            margin-left: 165px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+            
+            & + p {
+                width: 43vw;
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+    }
+}

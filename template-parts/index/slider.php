@@ -1,8 +1,6 @@
 <?php
         
-        // $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => -1, 'post_parent' => 0) ); 
         $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => 3, 'post_parent' => 0) ); 
-        // $query = new WP_Query( array( 'post_type' => 'ateliers', 'posts_per_page' => 1, 'post_parent' => 0) ); 
 
             ?>
             <div class="sliders-background-default"></div>
@@ -11,12 +9,9 @@
 
         $i = 0;
         
-        // $affiche = true;
         while ($query->have_posts()) :
             $query->the_post();
             $i++;
-
-            // if($affiche) :
         
         $titre = explode(" ", get_the_title());
 

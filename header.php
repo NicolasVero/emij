@@ -15,7 +15,7 @@
     <script src="<?= bloginfo('template_url'); ?>/assets/scripts/header-background.js" async></script>
     <title>Document</title>
 </head>
-<body>     
+<body <?php body_class(); ?>>    
     <header>
         <div class="header-elements">
             <div class="logo">

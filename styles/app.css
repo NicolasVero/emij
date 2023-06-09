@@ -2284,6 +2284,56 @@ footer .menu-partenaires .menu-partenaires-svg {
 .formulaire-contact form.sent .wpcf7-response-output::before {
   content: 'v ';
 }
+body.page-id-281 .open-navigation,
+body.page-id-281 .header-contact,
+body.page-id-281 .header-fixed-elements-background {
+  display: none;
+}
+body.page-id-281 .logo {
+  top: 12px;
+}
+body.page-id-281 main {
+  background-color: #FFC000;
+}
+body.page-id-281 main h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1;
+  padding-top: 60px;
+  transform: skewY(356deg);
+}
+body.page-id-281 main h1 strong {
+  font-weight: 500;
+}
+body.page-id-281 main h1 span {
+  display: block;
+  font-size: 90px;
+}
+body.page-id-281 main h1 span:first-of-type {
+  font-size: 70px;
+}
+body.page-id-281 main h1 span:last-of-type {
+  transform: translateX(150px);
+}
+body.page-id-281 main .wp-block-columns {
+  display: flex;
+  justify-content: space-around;
+}
+body.page-id-281 main figure {
+  margin-top: -245px;
+  margin-left: 165px;
+}
+body.page-id-281 main h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+}
+body.page-id-281 main h2 + p {
+  width: 43vw;
+  font-size: 18px;
+  font-weight: 300;
+}
 @media screen and (max-width: 1200px) {
   .slider .open-navigation {
     background-color: #FFFFFF;
