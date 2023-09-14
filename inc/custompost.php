@@ -95,7 +95,7 @@
             'hierarchical'        => false,
             'public'              => true,
             'has_archive'         => true,
-            'rewrite'			  => array( 'slug' => 'les-instruments'),
+            'rewrite'			  => array( 'slug' => 'les-professeurs'),
         );
         
         register_post_type( 'professeurs', $args );
